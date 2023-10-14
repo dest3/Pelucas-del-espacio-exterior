@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=3 format=3 uid="uid://77hjvakgytos"]
+
+[ext_resource type="PackedScene" uid="uid://badxs1ukcf04v" path="res://escenas/entidades/objeto.tscn" id="1_wph0e"]
+[ext_resource type="PackedScene" uid="uid://dsclclrq2wjbu" path="res://escenas/entidades/drop_zone.tscn" id="2_wxloa"]
 
 [node name="game" type="Node2D"]
+
+[node name="objeto" parent="." instance=ExtResource("1_wph0e")]
+z_index = 1
+position = Vector2(75, 51)
+
+[node name="drop_zone" parent="." instance=ExtResource("2_wxloa")]
+position = Vector2(1002, 355)
+
+[node name="drop_zone2" parent="." instance=ExtResource("2_wxloa")]
+position = Vector2(424, 392)
+
+[node name="drop_zone3" parent="." instance=ExtResource("2_wxloa")]
+position = Vector2(751, 175)
