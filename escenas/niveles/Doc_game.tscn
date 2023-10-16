@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://77hjvakgytos"]
+
+[ext_resource type="PackedScene" uid="uid://cgass7vfhubux" path="res://escenas/entidades/hoja_a4.tscn" id="1_24ckp"]
+[ext_resource type="PackedScene" uid="uid://dsclclrq2wjbu" path="res://escenas/entidades/origen.tscn" id="1_ijw2o"]
+[ext_resource type="PackedScene" uid="uid://badxs1ukcf04v" path="res://escenas/entidades/objeto.tscn" id="2_8ju6i"]
+[ext_resource type="Texture2D" uid="uid://7b83j81lnlat" path="res://escenas/assets/Pop Ups/Pop Up fondo.png" id="3_umtsp"]
+[ext_resource type="PackedScene" uid="uid://01bscv0s4iyd" path="res://escenas/entidades/recortes/doc_foto.tscn" id="5_2w8lm"]
+
+[node name="Doc_game" type="Node2D"]
+
+[node name="origen" parent="." instance=ExtResource("1_ijw2o")]
+position = Vector2(232, 320)
+
+[node name="origen2" parent="." instance=ExtResource("1_ijw2o")]
+position = Vector2(315, 183)
+
+[node name="origen3" parent="." instance=ExtResource("1_ijw2o")]
+position = Vector2(108, 177)
+
+[node name="origen4" parent="." instance=ExtResource("1_ijw2o")]
+position = Vector2(191, 435)
+
+[node name="hoja-A4" parent="." instance=ExtResource("1_24ckp")]
+position = Vector2(866, 301)
+
+[node name="objeto" parent="." instance=ExtResource("2_8ju6i")]
+position = Vector2(200, 290)
+
+[node name="PopUpFondo" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(574.5, 332.5)
+scale = Vector2(0.608854, 0.619444)
+texture = ExtResource("3_umtsp")
+
+[node name="Doc_foto" parent="." instance=ExtResource("5_2w8lm")]
+position = Vector2(235, 454)
+scale = Vector2(0.576149, 0.65625)

@@ -1,21 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://badxs1ukcf04v"]
 
-[ext_resource type="Texture2D" uid="uid://xnk58qrm3wf7" path="res://icon.svg" id="1_ohopa"]
 [ext_resource type="Script" path="res://escenas/entidades/objeto.gd" id="1_xuxol"]
+[ext_resource type="Texture2D" uid="uid://bp3fhjf7k8f88" path="res://escenas/assets/Mini game diarios/Archivos diario Recortes drag.png" id="2_h3tm4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnnkk"]
-size = Vector2(114, 122)
+size = Vector2(119, 92)
 
 [node name="objeto" type="Node2D"]
 script = ExtResource("1_xuxol")
 
-[node name="Icon" type="Sprite2D" parent="."]
-texture = ExtResource("1_ohopa")
+[node name="ArchivosDiarioRecortesDrag" type="Sprite2D" parent="."]
+scale = Vector2(0.290341, 0.284248)
+texture = ExtResource("2_h3tm4")
+region_enabled = true
+region_rect = Rect2(19.2112, 581.812, 423.688, 316.981)
 
-[node name="Area2D" type="Area2D" parent="Icon"]
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/Area2D"]
-position = Vector2(0, -1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_fnnkk")
 
-[connection signal="input_event" from="Icon/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
