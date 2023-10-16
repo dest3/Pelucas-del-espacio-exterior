@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bp3c2tkeiiouq"]
+[gd_scene load_steps=3 format=3 uid="uid://bp3c2tkeiiouq"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_2puqo"]
+[ext_resource type="PackedScene" uid="uid://v0x0433s8r75" path="res://escenas/niveles/juego_de_selección_de_palabras.tscn" id="2_ya0l3"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_2puqo")
@@ -14,15 +15,18 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 text = "play"
 
-[node name="play2" type="Button" parent="play"]
-offset_left = 379.0
-offset_top = -3.0
-offset_right = 708.0
-offset_bottom = 156.0
+[node name="play2" type="Button" parent="." node_paths=PackedStringArray("shortcut_context")]
+offset_left = 556.0
+offset_top = 126.0
+offset_right = 885.0
+offset_bottom = 285.0
 size_flags_horizontal = 4
 size_flags_vertical = 6
+shortcut_context = NodePath("Juego de selección de palabras")
 action_mode = 0
-text = "play"
+text = "Textito"
+
+[node name="Juego de selección de palabras" parent="play2" instance=ExtResource("2_ya0l3")]
 
 [node name="quit" type="Button" parent="."]
 offset_left = 501.0
@@ -44,6 +48,6 @@ size_flags_vertical = 4
 text = "creditos"
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="play/play2" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="play2" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
