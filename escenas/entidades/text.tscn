@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bind0p6wtxoq4"]
+
+[ext_resource type="Script" path="res://escenas/entidades/drop_zone.gd" id="1_44j8c"]
+
+[node name="drop_zone" type="Marker2D" groups=["zona"]]
+script = ExtResource("1_44j8c")
+
+[node name="TextPrint" type="TextEdit" parent="."]
+offset_left = 55.0
+offset_top = 25.0
+offset_right = 1052.0
+offset_bottom = 607.0
+text = "los políticos son reemplazados por alienígenas que usan pelucas para camuflarse. Estos alienígenas son malignos y tienen planes de dominar el mundo.
+
+La conspiración comenzó hace muchos años, cuando los alienígenas llegaron a la Tierra en busca de un nuevo hogar. Al principio, se infiltraron en la sociedad humana disfrazados de humanos. Sin embargo, pronto se dieron cuenta de que necesitaban una forma más efectiva de ocultar su verdadera identidad.
+
+Fue entonces cuando idearon el plan de las pelucas. Las pelucas eran perfectas para sus propósitos. Eran fáciles de usar y podían ocultar sus características alienígenas.
+
+Los alienígenas comenzaron a reemplazar a los políticos uno a uno. El proceso era lento y meticuloso. Los alienígenas elegían a sus víctimas cuidadosamente, asegurándose de que fueran personas influyentes y con un alto cargo en el gobierno.
+
+Una vez que un político era reemplazado, el alienígena tomaba su lugar. El alienígena comenzaba a implementar políticas que beneficiaran a los alienígenas. Estas políticas eran perjudiciales para los humanos, pero los alienígenas no se preocupaban por eso.
+
+Un día, un grupo de conspiranoicos descubrió la verdad sobre la conspiración. Los conspiranoicos comenzaron a investigar y pronto descubrieron pruebas que respaldaban sus teorías.
+
+Los conspiranoicos decidieron tomar medidas para detener a los alienígenas. Comenzaron a difundir la verdad sobre la conspiración y a organizar protestas.
+
+Los alienígenas se dieron cuenta de que los conspiranoicos eran una amenaza. Comenzaron a perseguir a los conspiranoicos y a tratar de silenciarlos.
+
+La batalla entre los conspiranoicos y los alienígenas continúa. Los conspiranoicos están decididos a detener a los alienígenas y salvar al mundo.
+"
