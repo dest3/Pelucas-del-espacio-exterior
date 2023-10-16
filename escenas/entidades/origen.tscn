@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsclclrq2wjbu"]
+
+[ext_resource type="Script" path="res://escenas/entidades/origen.gd" id="1_7tj62"]
+
+[node name="drop_zone" type="Marker2D" groups=["zona"]]
+script = ExtResource("1_7tj62")

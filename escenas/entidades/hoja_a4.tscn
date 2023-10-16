@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgass7vfhubux"]
+
+[ext_resource type="Texture2D" uid="uid://531munnqsine" path="res://escenas/assets/Pop Ups/pagina a4.png" id="1_j00mc"]
+[ext_resource type="PackedScene" uid="uid://boo0c0cmmj1yg" path="res://escenas/entidades/drop.tscn" id="2_sbbpc"]
+
+[node name="hoja-A4" type="Node2D"]
+position = Vector2(0, 123)
+
+[node name="PaginaA4" type="Sprite2D" parent="."]
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("1_j00mc")
+metadata/_edit_group_ = true
+
+[node name="drop" parent="PaginaA4" instance=ExtResource("2_sbbpc")]
+position = Vector2(5.35714, -267.857)
+respuesta = "titulo"
+
+[node name="drop2" parent="PaginaA4" instance=ExtResource("2_sbbpc")]
+position = Vector2(-133.929, -121.429)
+respuesta = "imagen"
+
+[node name="drop3" parent="PaginaA4" instance=ExtResource("2_sbbpc")]
+position = Vector2(171.429, -87.5)
+respuesta = "texto"
+
+[node name="drop4" parent="PaginaA4" instance=ExtResource("2_sbbpc")]
+position = Vector2(-128.571, 142.857)
+respuesta = "imagen"
+
+[node name="drop5" parent="PaginaA4" instance=ExtResource("2_sbbpc")]
+position = Vector2(148.214, 189.286)
+respuesta = "texto"
