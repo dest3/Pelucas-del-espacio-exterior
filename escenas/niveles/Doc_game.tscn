@@ -33,5 +33,4 @@ scale = Vector2(0.608854, 0.619444)
 texture = ExtResource("3_umtsp")
 
 [node name="Doc_foto" parent="." instance=ExtResource("5_2w8lm")]
-position = Vector2(235, 454)
-scale = Vector2(0.576149, 0.65625)
+position = Vector2(389, 527)

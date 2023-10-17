@@ -1,12 +1,11 @@
 extends Documento
-
-var nombre = "imagen"
+class_name doc_foto
 var mouse_over = true
 
 func _ready():
-	rest_nodes = get_tree().get_nodes_in_group("zona")
-	rest_point = rest_nodes[0].global_position
-	rest_nodes[0].select()
+	nombre = "foto"
+	get_rest_point()
+
 
 # Sobrescribe el método "_input" para manejar eventos de entrada del mouse
 func _input(event):
@@ -15,6 +14,7 @@ func _input(event):
 			# Cuando se presiona el botón izquierdo del mouse
 			selected = true
 			emit_signal("drag_started", event.position)
+			print(nombre)
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.is_pressed():
 			# Cuando se libera el botón izquierdo del mouse
 			selected = false

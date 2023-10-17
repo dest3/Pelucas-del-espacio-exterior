@@ -12,16 +12,14 @@ var selected = false #si esta seleccionado o no
 var rest_point 
 var rest_nodes= []
 
+
 func _ready():
-	rest_nodes = get_tree().get_nodes_in_group("zona")
-	rest_point = rest_nodes[0].global_position
-	rest_nodes[0].select()
+	get_rest_point()
+
 
 #cuando se le hace click al objeto, selected se pone verdadero
-func _on_area_2d_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click"):
-		selected = true
-		emit_signal("drag_started",event.position)
+func _on_area_2d_input_event(_viewport, event, _shape_idx):
+	down_click_izq(event)
 
 #si esta seleccionado todo el tiempo se pociciona en donde este el mouse
 func _physics_process(delta):
@@ -29,11 +27,7 @@ func _physics_process(delta):
 
 #si se le deja de hacer click al bojeto se desactvia selected y queda en el ultimo lugar que tuvo 
 func _input(event):
-	if event is InputEventMouseButton: #captura todos los eventos y comprueba si se levanta el click
-		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:#si boton izq no esta precionado
-			selected = false
-			emit_signal("drag_ended", event.position)
-			last_rest()
+	up_click_izq(event)
 					
 func drag(delta):
 	if selected:
@@ -51,9 +45,23 @@ func last_rest():
 			child.select()
 			rest_point = child.global_position
 			shortest_dist = distance
+
+func up_click_izq(event):
+	if event is InputEventMouseButton: #captura todos los eventos y comprueba si se levanta el click
+		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:#si boton izq no esta precionado
+			selected = false
+			emit_signal("drag_ended", event.position)
+			last_rest()
 	
+func down_click_izq(event):
+	if Input.is_action_just_pressed("click"):
+		print(nombre)
+		selected = true
+		emit_signal("drag_started",event.position)
 	
-	
-	
-	
+#obtiene los puntos de anclaje al principio del nivel.
+func get_rest_point():
+	rest_nodes = get_tree().get_nodes_in_group("zona")
+	rest_point = rest_nodes[0].global_position
+	rest_nodes[0].select()
 	

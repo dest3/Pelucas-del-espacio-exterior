@@ -8,7 +8,7 @@ func _ready():
 	for i in range(5):
 		palabras.append(Sprite2D.new())
 		palabras[i].name = "Palabra " + str(i)
-		palabras[i].color = Color.AQUA ()
+		palabras[i].color = Color.AQUA
 		palabras[i].position = Vector2(randf(), randf())
 
 	# Agregar las palabras al canvas
