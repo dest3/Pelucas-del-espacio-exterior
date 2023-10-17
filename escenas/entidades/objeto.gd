@@ -16,7 +16,6 @@ var rest_nodes= []
 func _ready():
 	get_rest_point()
 
-
 #cuando se le hace click al objeto, selected se pone verdadero
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	down_click_izq(event)
@@ -28,7 +27,8 @@ func _physics_process(delta):
 #si se le deja de hacer click al bojeto se desactvia selected y queda en el ultimo lugar que tuvo 
 func _input(event):
 	up_click_izq(event)
-					
+
+#si esta selected cambia la ubicacion del objeto con la del mouse
 func drag(delta):
 	if selected:
 		global_position = lerp(global_position, get_global_mouse_position(), 25 * delta)#hace que la posicion del objeto sea la del mouse
@@ -36,7 +36,7 @@ func drag(delta):
 	else:
 		global_position = lerp(global_position, rest_point, 10 * delta) #hace que la posicion del objeto sea el ultimo rest point
 		#rotation = lerp_angle(rotation, 0, 10 * delta)#vuelve al angulo por defecto del objeto al soltarlo
-
+#obtiene todos los puntos de anclaje iniciales y setea como origen
 func last_rest():
 	var shortest_dist = 75 #la distancia mas corta posible para dejar el objeto cerca de la znoa de drop (tamaño de la zona de drop)
 	for child in rest_nodes:
@@ -45,7 +45,7 @@ func last_rest():
 			child.select()
 			rest_point = child.global_position
 			shortest_dist = distance
-
+#si
 func up_click_izq(event):
 	if event is InputEventMouseButton: #captura todos los eventos y comprueba si se levanta el click
 		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:#si boton izq no esta precionado
