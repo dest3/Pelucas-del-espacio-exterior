@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfdpcrhsbgj5m"
-path="res://.godot/imported/Pizarron.png-1e599be27d8125321144482fc1d5500f.ctex"
+path="res://.godot/imported/Pizarron.png-17b0135b90f87c4cb2a012c11eef9eb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/Sprite e Imagenes/Pizarron.png"
-dest_files=["res://.godot/imported/Pizarron.png-1e599be27d8125321144482fc1d5500f.ctex"]
+source_file="res://Sprite e Imagenes/Pizarron.png"
+dest_files=["res://.godot/imported/Pizarron.png-17b0135b90f87c4cb2a012c11eef9eb1.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 extends Documento
 
-class_name docu_foto
+class_name doc_foto
 
 func _ready():
 	var foto= Documento.new()

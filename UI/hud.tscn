@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://x4ioy5al6wqi"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_cffu0"]
-[ext_resource type="Texture2D" uid="uid://doicrx68penqc" path="res://escenas/Sprite e Imagenes/Pantallas gral- Pelucas (1).png" id="1_i8s7e"]
-[ext_resource type="Texture2D" uid="uid://c40li24xpacyt" path="res://escenas/Sprite e Imagenes/Fondo Main.png" id="2_lw5k8"]
-[ext_resource type="Texture2D" uid="uid://fx2c7pta0tsw" path="res://escenas/Sprite e Imagenes/Carpeta Azul.png" id="4_qugrj"]
-[ext_resource type="Texture2D" uid="uid://cgt25dlswqj8o" path="res://escenas/Sprite e Imagenes/Maquina de Escribir.png" id="5_niou0"]
-[ext_resource type="Texture2D" uid="uid://b002bfpptv2lc" path="res://escenas/Sprite e Imagenes/Archivos.png" id="6_pcuyv"]
-[ext_resource type="Texture2D" uid="uid://dk1gcu8vej643" path="res://escenas/Sprite e Imagenes/Maquina de Cine.png" id="7_ilhxt"]
-[ext_resource type="Texture2D" uid="uid://bfdpcrhsbgj5m" path="res://escenas/Sprite e Imagenes/Pizarron.png" id="8_p1tb3"]
+[ext_resource type="Texture2D" uid="uid://doicrx68penqc" path="res://Sprite e Imagenes/Pantallas gral- Pelucas (1).png" id="1_i8s7e"]
+[ext_resource type="Texture2D" uid="uid://c40li24xpacyt" path="res://Sprite e Imagenes/Fondo Main.png" id="2_lw5k8"]
+[ext_resource type="Texture2D" uid="uid://fx2c7pta0tsw" path="res://Sprite e Imagenes/Carpeta Azul.png" id="4_qugrj"]
+[ext_resource type="Texture2D" uid="uid://cgt25dlswqj8o" path="res://Sprite e Imagenes/Maquina de Escribir.png" id="5_niou0"]
+[ext_resource type="Texture2D" uid="uid://b002bfpptv2lc" path="res://Sprite e Imagenes/Archivos.png" id="6_pcuyv"]
+[ext_resource type="Texture2D" uid="uid://dk1gcu8vej643" path="res://Sprite e Imagenes/Maquina de Cine.png" id="7_ilhxt"]
+[ext_resource type="Texture2D" uid="uid://bfdpcrhsbgj5m" path="res://Sprite e Imagenes/Pizarron.png" id="8_p1tb3"]
 
 [node name="HUD" type="Node2D"]
 script = ExtResource("1_cffu0")

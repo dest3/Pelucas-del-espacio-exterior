@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://doicrx68penqc"
-path="res://.godot/imported/Pantallas gral- Pelucas (1).png-e2be33a3eb0823c583df8ce683ebb527.ctex"
+path="res://.godot/imported/Pantallas gral- Pelucas (1).png-9876940a29cc61820b4897e5328b3cb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/Sprite e Imagenes/Pantallas gral- Pelucas (1).png"
-dest_files=["res://.godot/imported/Pantallas gral- Pelucas (1).png-e2be33a3eb0823c583df8ce683ebb527.ctex"]
+source_file="res://Sprite e Imagenes/Pantallas gral- Pelucas (1).png"
+dest_files=["res://.godot/imported/Pantallas gral- Pelucas (1).png-9876940a29cc61820b4897e5328b3cb2.ctex"]
 
 [params]
 
