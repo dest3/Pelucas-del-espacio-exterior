@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cgass7vfhubux" path="res://escenas/entidades/hoja_a4.tscn" id="1_24ckp"]
 [ext_resource type="PackedScene" uid="uid://dsclclrq2wjbu" path="res://escenas/entidades/origen.tscn" id="1_ijw2o"]
 [ext_resource type="Texture2D" uid="uid://7b83j81lnlat" path="res://escenas/assets/Pop Ups/Pop Up fondo.png" id="3_umtsp"]
-[ext_resource type="PackedScene" uid="uid://01bscv0s4iyd" path="res://escenas/entidades/recortes/doc_foto.tscn" id="5_2w8lm"]
+[ext_resource type="PackedScene" uid="uid://badxs1ukcf04v" path="res://escenas/entidades/objeto.tscn" id="4_067jt"]
 
 [node name="Doc_game" type="Node2D"]
 
@@ -28,5 +28,5 @@ position = Vector2(574.5, 332.5)
 scale = Vector2(0.608854, 0.619444)
 texture = ExtResource("3_umtsp")
 
-[node name="Doc_foto" parent="." instance=ExtResource("5_2w8lm")]
-position = Vector2(389, 527)
+[node name="objeto" parent="." instance=ExtResource("4_067jt")]
+position = Vector2(187, 170)

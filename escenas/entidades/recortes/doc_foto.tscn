@@ -6,18 +6,20 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uo87q"]
 size = Vector2(317, 249)
 
-[node name="Doc_foto" type="Sprite2D"]
+[node name="Area2D" type="Area2D"]
+scale = Vector2(0.721264, 0.789063)
+script = ExtResource("2_xtxgc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6.5, 2.5)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_uo87q")
+
+[node name="Doc_foto" type="Sprite2D" parent="."]
 scale = Vector2(0.721264, 0.789063)
 texture = ExtResource("1_etpm5")
 region_enabled = true
 region_rect = Rect2(838.984, 512.17, 348.08, 256.781)
-script = ExtResource("2_xtxgc")
 metadata/_edit_group_ = true
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-6.5, 2.5)
-shape = SubResource("RectangleShape2D_uo87q")
-
-[connection signal="input_event" from="Area2D" to="." method="_input_event"]
+[connection signal="input_event" from="." to="Doc_foto" method="_input_event"]

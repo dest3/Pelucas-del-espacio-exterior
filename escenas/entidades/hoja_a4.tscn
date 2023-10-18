@@ -17,7 +17,7 @@ respuesta = "titulo"
 
 [node name="drop2" parent="PaginaA4" instance=ExtResource("2_sbbpc")]
 position = Vector2(-133.929, -121.429)
-respuesta = "imagen"
+respuesta = "foto"
 
 [node name="drop3" parent="PaginaA4" instance=ExtResource("2_sbbpc")]
 position = Vector2(171.429, -87.5)
@@ -25,7 +25,7 @@ respuesta = "texto"
 
 [node name="drop4" parent="PaginaA4" instance=ExtResource("2_sbbpc")]
 position = Vector2(-128.571, 142.857)
-respuesta = "imagen"
+respuesta = "foto"
 
 [node name="drop5" parent="PaginaA4" instance=ExtResource("2_sbbpc")]
 position = Vector2(148.214, 189.286)
