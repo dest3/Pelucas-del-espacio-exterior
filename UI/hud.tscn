@@ -51,6 +51,11 @@ offset_bottom = 324.42
 texture_normal = ExtResource("7_ilhxt")
 
 [node name="Pizarron" type="Sprite2D" parent="CanvasLayer/Background"]
-position = Vector2(133.333, -34.2195)
+position = Vector2(-41.6667, -27.5424)
 scale = Vector2(0.504562, 0.5442)
 texture = ExtResource("8_p1tb3")
+
+[connection signal="pressed" from="CanvasLayer/Background/Panel/Carpeta Azul" to="." method="_on_carpeta_azul_pressed"]
+[connection signal="pressed" from="CanvasLayer/Background/Panel/Maquna de Escribir" to="." method="_on_maquna_de_escribir_pressed"]
+[connection signal="pressed" from="CanvasLayer/Background/Panel/Archivos" to="." method="_on_archivos_pressed"]
+[connection signal="pressed" from="CanvasLayer/Background/Panel/Maquina de Cine" to="." method="_on_maquina_de_cine_pressed"]

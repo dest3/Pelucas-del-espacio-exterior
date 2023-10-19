@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnwjn8v81ygsj"]
+
+[ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_ngv3e"]
+
+[node name="documento_video_intro" type="Node2D"]
+script = ExtResource("1_ngv3e")
+
+[node name="documentos" type="Button" parent="."]
+offset_left = 435.0
+offset_top = 166.0
+offset_right = 686.0
+offset_bottom = 381.0
+text = "jugar_documentos"
+
+[connection signal="pressed" from="documentos" to="." method="_on_documentos_pressed"]
