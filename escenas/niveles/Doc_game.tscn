@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=5 format=3 uid="uid://77hjvakgytos"]
 
-[ext_resource type="PackedScene" uid="uid://cgass7vfhubux" path="res://escenas/entidades/hoja_a4.tscn" id="1_24ckp"]
 [ext_resource type="PackedScene" uid="uid://dsclclrq2wjbu" path="res://escenas/entidades/origen.tscn" id="1_ijw2o"]
 [ext_resource type="Texture2D" uid="uid://7b83j81lnlat" path="res://escenas/assets/Pop Ups/Pop Up fondo.png" id="3_umtsp"]
 [ext_resource type="PackedScene" uid="uid://badxs1ukcf04v" path="res://escenas/entidades/objeto.tscn" id="4_067jt"]
-[ext_resource type="PackedScene" uid="uid://01bscv0s4iyd" path="res://escenas/entidades/recortes/doc_foto.tscn" id="5_1dhid"]
+[ext_resource type="PackedScene" uid="uid://boo0c0cmmj1yg" path="res://escenas/entidades/drop.tscn" id="4_poov4"]
 
 [node name="Doc_game" type="Node2D"]
 
@@ -20,9 +19,6 @@ position = Vector2(108, 177)
 [node name="origen4" parent="." instance=ExtResource("1_ijw2o")]
 position = Vector2(191, 435)
 
-[node name="hoja-A4" parent="." instance=ExtResource("1_24ckp")]
-position = Vector2(866, 301)
-
 [node name="PopUpFondo" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(574.5, 332.5)
@@ -30,7 +26,10 @@ scale = Vector2(0.608854, 0.619444)
 texture = ExtResource("3_umtsp")
 
 [node name="objeto" parent="." instance=ExtResource("4_067jt")]
-position = Vector2(187, 170)
+position = Vector2(184, 298)
 
-[node name="Area2D" parent="." instance=ExtResource("5_1dhid")]
-position = Vector2(255, 450)
+[node name="drop" parent="." instance=ExtResource("4_poov4")]
+position = Vector2(650, 126)
+
+[node name="drop2" parent="." instance=ExtResource("4_poov4")]
+position = Vector2(967, 488)

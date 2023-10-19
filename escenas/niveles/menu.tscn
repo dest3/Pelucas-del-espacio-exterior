@@ -6,23 +6,13 @@
 script = ExtResource("1_2puqo")
 
 [node name="play" type="Button" parent="."]
-offset_left = 177.0
-offset_top = 129.0
-offset_right = 506.0
-offset_bottom = 288.0
+offset_left = 410.0
+offset_top = 131.0
+offset_right = 739.0
+offset_bottom = 290.0
 size_flags_horizontal = 4
 size_flags_vertical = 6
 text = "play"
-
-[node name="play2" type="Button" parent="."]
-offset_left = 556.0
-offset_top = 126.0
-offset_right = 885.0
-offset_bottom = 285.0
-size_flags_horizontal = 4
-size_flags_vertical = 6
-action_mode = 0
-text = "Textito"
 
 [node name="quit" type="Button" parent="."]
 offset_left = 501.0
@@ -44,6 +34,5 @@ size_flags_vertical = 4
 text = "creditos"
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="play2" to="." method="_on_play_2_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
