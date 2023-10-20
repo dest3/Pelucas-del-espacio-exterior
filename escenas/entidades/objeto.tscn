@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://badxs1ukcf04v"]
 
-[ext_resource type="Script" path="res://escenas/entidades/recortes/objeto.gd" id="1_xuxol"]
+[ext_resource type="Script" path="res://escenas/entidades/objeto.gd" id="1_xuxol"]
 [ext_resource type="Texture2D" uid="uid://bp3fhjf7k8f88" path="res://escenas/assets/Mini game diarios/Archivos diario Recortes drag.png" id="2_h3tm4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnnkk"]

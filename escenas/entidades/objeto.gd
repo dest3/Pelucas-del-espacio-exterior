@@ -8,6 +8,7 @@ signal drag_ended
 
 #defino variables 
 var nombre = "documento"
+var selected = false #si esta seleccionado o no
 var rest_point 
 var rest_nodes= []
 

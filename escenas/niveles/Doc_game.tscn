@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_iarxv"]
 [ext_resource type="PackedScene" uid="uid://dsclclrq2wjbu" path="res://escenas/entidades/origen.tscn" id="1_ijw2o"]
 [ext_resource type="Texture2D" uid="uid://7b83j81lnlat" path="res://escenas/assets/Pop Ups/Pop Up fondo.png" id="3_umtsp"]
-[ext_resource type="PackedScene" uid="uid://cse1ormhx0i70" path="res://escenas/assets/recortes/drag.tscn" id="4_junji"]
+[ext_resource type="PackedScene" uid="uid://boo0c0cmmj1yg" path="res://escenas/entidades/drop.tscn" id="4_poov4"]
 
 [node name="Doc_game" type="Node2D"]
 script = ExtResource("1_iarxv")
@@ -26,6 +26,12 @@ position = Vector2(574.5, 332.5)
 scale = Vector2(0.608854, 0.619444)
 texture = ExtResource("3_umtsp")
 
+[node name="drop" parent="." instance=ExtResource("4_poov4")]
+position = Vector2(821, 221)
+
+[node name="drop2" parent="." instance=ExtResource("4_poov4")]
+position = Vector2(957, 455)
+
 [node name="taller-doc" type="Button" parent="."]
 offset_left = 75.0
 offset_top = 522.0
@@ -33,11 +39,5 @@ offset_right = 194.0
 offset_bottom = 616.0
 text = "taller
 "
-
-[node name="drag" parent="." instance=ExtResource("4_junji")]
-position = Vector2(890, 148)
-
-[node name="drag2" parent="." instance=ExtResource("4_junji")]
-position = Vector2(870, 381)
 
 [connection signal="pressed" from="taller-doc" to="." method="_on_tallerdoc_pressed"]
