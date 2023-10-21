@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Objeto="*res://escenas/entidades/objeto.gd"
+global_var="*res://escenas/scripts/global_var.gd"
 
 [dotnet]
 

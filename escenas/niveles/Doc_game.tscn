@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=6 format=3 uid="uid://77hjvakgytos"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_iarxv"]
 [ext_resource type="PackedScene" uid="uid://dsclclrq2wjbu" path="res://escenas/entidades/origen.tscn" id="1_ijw2o"]
 [ext_resource type="Texture2D" uid="uid://7b83j81lnlat" path="res://escenas/assets/Pop Ups/Pop Up fondo.png" id="3_umtsp"]
 [ext_resource type="PackedScene" uid="uid://boo0c0cmmj1yg" path="res://escenas/entidades/drop.tscn" id="4_poov4"]
+[ext_resource type="PackedScene" uid="uid://0mmpu0nk827n" path="res://escenas/entidades/objeto.tscn" id="5_bwqhx"]
 
 [node name="Doc_game" type="Node2D"]
 script = ExtResource("1_iarxv")
@@ -26,12 +27,6 @@ position = Vector2(574.5, 332.5)
 scale = Vector2(0.608854, 0.619444)
 texture = ExtResource("3_umtsp")
 
-[node name="drop" parent="." instance=ExtResource("4_poov4")]
-position = Vector2(821, 221)
-
-[node name="drop2" parent="." instance=ExtResource("4_poov4")]
-position = Vector2(957, 455)
-
 [node name="taller-doc" type="Button" parent="."]
 offset_left = 75.0
 offset_top = 522.0
@@ -39,5 +34,12 @@ offset_right = 194.0
 offset_bottom = 616.0
 text = "taller
 "
+
+[node name="objeto" parent="." instance=ExtResource("5_bwqhx")]
+position = Vector2(399, 299)
+
+[node name="drop" parent="." instance=ExtResource("4_poov4")]
+position = Vector2(673, 234)
+respuesta = "jhg"
 
 [connection signal="pressed" from="taller-doc" to="." method="_on_tallerdoc_pressed"]

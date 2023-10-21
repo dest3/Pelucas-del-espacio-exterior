@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://badxs1ukcf04v"]
+[gd_scene load_steps=4 format=3 uid="uid://0mmpu0nk827n"]
 
 [ext_resource type="Script" path="res://escenas/entidades/objeto.gd" id="1_xuxol"]
 [ext_resource type="Texture2D" uid="uid://bp3fhjf7k8f88" path="res://escenas/assets/Mini game diarios/Archivos diario Recortes drag.png" id="2_h3tm4"]
@@ -20,4 +20,7 @@ region_rect = Rect2(19.2112, 581.812, 423.688, 316.981)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_fnnkk")
 
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

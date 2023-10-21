@@ -1,7 +1,14 @@
-extends Area2D
+extends StaticBody2D
 
-#dibuja en pantalla 
-func _draw():
-	draw_circle(Vector2.ZERO, 60, Color.BLANCHED_ALMOND)#dibuja un circulo tomando 3 valores (origen, tamaño, color)	
+@export var respuesta = ""
 
 
+func _ready():
+	modulate = Color(Color.MEDIUM_PURPLE,0.7)
+
+
+func _process(_delta):
+	if global_var.is_draging:
+		visible = true
+	else:
+		visible = false
