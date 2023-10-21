@@ -29,4 +29,6 @@ region_enabled = true
 region_rect = Rect2(183.974, 454.606, 386.522, 201.314)
 metadata/_edit_group_ = true
 
+[connection signal="mouse_entered" from="menu" to="." method="_on_menu_mouse_entered"]
+[connection signal="mouse_exited" from="menu" to="." method="_on_menu_mouse_exited"]
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

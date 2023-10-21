@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://f2eptnhgdtm6"]
+
+[ext_resource type="Texture2D" uid="uid://irs1fxeckurp" path="res://escenas/assets/Main - Taller de Investigación/Pantallas gral- Pelucas.png" id="1_w8d0k"]
+[ext_resource type="Texture2D" uid="uid://ciwwfam5wx180" path="res://escenas/assets/Main - Taller de Investigación/Fondo Main.png" id="2_cmdu3"]
+
+[node name="taller" type="Node2D"]
+position = Vector2(631, 281)
+
+[node name="PantallasGral-Pelucas" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.223529)
+position = Vector2(329, 259)
+texture = ExtResource("1_w8d0k")
+
+[node name="FondoMain" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(330, 260)
+texture = ExtResource("2_cmdu3")

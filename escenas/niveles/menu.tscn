@@ -61,6 +61,19 @@ texture = ExtResource("4_sue3u")
 region_enabled = true
 region_rect = Rect2(314.098, 239.105, 497.313, 210.072)
 
+[node name="crunch" type="Button" parent="."]
+offset_left = 999.0
+offset_top = 301.0
+offset_right = 1295.0
+offset_bottom = 444.0
+
+[node name="Crunch" type="Sprite2D" parent="crunch"]
+z_index = 1
+position = Vector2(143, 80)
+texture = ExtResource("8_i6hhn")
+region_enabled = true
+region_rect = Rect2(937.184, 258.843, 404.624, 251.593)
+
 [node name="Falcon" type="Sprite2D" parent="."]
 position = Vector2(961, 536)
 texture = ExtResource("4_canof")
@@ -76,14 +89,14 @@ texture = ExtResource("7_bdk4f")
 region_enabled = true
 region_rect = Rect2(0, 0, 1198.91, 433.641)
 
-[node name="Crunch" type="Sprite2D" parent="."]
-position = Vector2(1147, 370)
-texture = ExtResource("8_i6hhn")
-region_enabled = true
-region_rect = Rect2(937.184, 258.843, 404.624, 251.593)
-
 [connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
 [connection signal="mouse_exited" from="play" to="." method="_on_play_mouse_exited"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="mouse_entered" from="creditos" to="." method="_on_creditos_mouse_entered"]
+[connection signal="mouse_exited" from="creditos" to="." method="_on_creditos_mouse_exited"]
 [connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
+[connection signal="mouse_entered" from="crunch" to="." method="_on_crunch_mouse_entered"]
+[connection signal="mouse_exited" from="crunch" to="." method="_on_crunch_mouse_exited"]
