@@ -1,16 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1lxbj68508dv"]
+[gd_scene load_steps=4 format=3 uid="uid://d1lxbj68508dv"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_lndhg"]
+[ext_resource type="Texture2D" uid="uid://bxih1ldsfo5aa" path="res://escenas/assets/Creditos/Salir.png" id="2_ktlte"]
+[ext_resource type="Texture2D" uid="uid://nrm6lbxs1rw7" path="res://escenas/assets/Creditos/creditos si.png" id="3_tqnuj"]
 
 [node name="creditos" type="Node2D"]
 script = ExtResource("1_lndhg")
 
+[node name="CreditosSi" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(959, 541)
+texture = ExtResource("3_tqnuj")
+
 [node name="menu" type="Button" parent="."]
-offset_left = 40.0
-offset_top = 555.0
-offset_right = 132.0
-offset_bottom = 620.0
+offset_left = 1686.0
+offset_top = -8.0
+offset_right = 1999.0
+offset_bottom = 129.0
+rotation = 0.675442
 text = "menu
 "
+metadata/_edit_group_ = true
+
+[node name="Salir" type="Sprite2D" parent="menu"]
+position = Vector2(159, 76)
+texture = ExtResource("2_ktlte")
+region_enabled = true
+region_rect = Rect2(183.974, 454.606, 386.522, 201.314)
+metadata/_edit_group_ = true
 
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

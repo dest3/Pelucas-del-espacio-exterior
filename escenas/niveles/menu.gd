@@ -36,9 +36,8 @@ func _on_tallerdoc_pressed():
 
 
 func _on_play_mouse_entered():
-	children = get_children(0)
-	scale =Vector2(1.05, 1.05)
+	pass
 
 
 func _on_play_mouse_exited():
-	children.scale(Vector2(1.05, 1.05))
+	pass
