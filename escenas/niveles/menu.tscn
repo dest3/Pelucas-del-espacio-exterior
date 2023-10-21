@@ -1,38 +1,89 @@
-[gd_scene load_steps=2 format=3 uid="uid://bp3c2tkeiiouq"]
+[gd_scene load_steps=9 format=3 uid="uid://bp3c2tkeiiouq"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_2puqo"]
+[ext_resource type="Texture2D" uid="uid://pwbr8o7fa8xc" path="res://escenas/assets/Menu/Jugar.png" id="2_fyyyq"]
+[ext_resource type="Texture2D" uid="uid://dksuoyvqjntgt" path="res://escenas/assets/Menu/Salir.png" id="3_b44mj"]
+[ext_resource type="Texture2D" uid="uid://rrjcfp80bgms" path="res://escenas/assets/Menu/Falcon.png" id="4_canof"]
+[ext_resource type="Texture2D" uid="uid://3j2xn6akm03o" path="res://escenas/assets/Menu/Creditos.png" id="4_sue3u"]
+[ext_resource type="Texture2D" uid="uid://0c8g7c4j2a13" path="res://escenas/assets/Menu/MENU - plantilla.png" id="5_8te85"]
+[ext_resource type="Texture2D" uid="uid://c08a8pt0jhjp6" path="res://escenas/assets/Menu/titulo.png" id="7_bdk4f"]
+[ext_resource type="Texture2D" uid="uid://c6boeu61unk0j" path="res://escenas/assets/Menu/Crunch.png" id="8_i6hhn"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_2puqo")
 
 [node name="play" type="Button" parent="."]
-offset_left = 410.0
-offset_top = 131.0
-offset_right = 739.0
-offset_bottom = 290.0
+offset_left = 560.0
+offset_top = 449.0
+offset_right = 889.0
+offset_bottom = 608.0
 size_flags_horizontal = 4
 size_flags_vertical = 6
-text = "play"
+metadata/_edit_group_ = true
+
+[node name="Jugar" type="Sprite2D" parent="play"]
+position = Vector2(162.5, 87.75)
+scale = Vector2(1.03333, 1.07635)
+texture = ExtResource("2_fyyyq")
+region_enabled = true
+region_rect = Rect2(185.483, 71.9053, 390.133, 203.641)
 
 [node name="quit" type="Button" parent="."]
-offset_left = 501.0
-offset_top = 464.0
-offset_right = 644.0
-offset_bottom = 571.0
+offset_left = 569.0
+offset_top = 867.0
+offset_right = 874.0
+offset_bottom = 1003.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "quit
 "
+metadata/_edit_group_ = true
+
+[node name="Salir" type="Sprite2D" parent="quit"]
+position = Vector2(150, 64)
+texture = ExtResource("3_b44mj")
+region_enabled = true
+region_rect = Rect2(185.483, 455.608, 379.415, 197.21)
 
 [node name="creditos" type="Button" parent="."]
-offset_left = 501.0
-offset_top = 332.0
-offset_right = 644.0
-offset_bottom = 439.0
+offset_left = 733.0
+offset_top = 654.0
+offset_right = 1062.0
+offset_bottom = 797.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "creditos"
+metadata/_edit_group_ = true
 
+[node name="Creditos" type="Sprite2D" parent="creditos"]
+position = Vector2(170, 70)
+texture = ExtResource("4_sue3u")
+region_enabled = true
+region_rect = Rect2(314.098, 239.105, 497.313, 210.072)
+
+[node name="Falcon" type="Sprite2D" parent="."]
+position = Vector2(961, 536)
+texture = ExtResource("4_canof")
+
+[node name="Menu-Plantilla" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(959, 542)
+texture = ExtResource("5_8te85")
+
+[node name="Titulo" type="Sprite2D" parent="."]
+position = Vector2(597, 215)
+texture = ExtResource("7_bdk4f")
+region_enabled = true
+region_rect = Rect2(0, 0, 1198.91, 433.641)
+
+[node name="Crunch" type="Sprite2D" parent="."]
+position = Vector2(1147, 370)
+texture = ExtResource("8_i6hhn")
+region_enabled = true
+region_rect = Rect2(937.184, 258.843, 404.624, 251.593)
+
+[connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
+[connection signal="mouse_exited" from="play" to="." method="_on_play_mouse_exited"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]

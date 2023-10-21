@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var children
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://escenas/niveles/videos/video_intro.tscn")
 
@@ -33,3 +33,12 @@ func _on_menu_pressed():
 
 func _on_tallerdoc_pressed():
 	get_tree().change_scene_to_file("res://UI/hud.tscn")
+
+
+func _on_play_mouse_entered():
+	children = get_children(0)
+	scale =Vector2(1.05, 1.05)
+
+
+func _on_play_mouse_exited():
+	children.scale(Vector2(1.05, 1.05))

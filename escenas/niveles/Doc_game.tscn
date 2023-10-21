@@ -23,8 +23,8 @@ position = Vector2(191, 435)
 
 [node name="PopUpFondo" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(574.5, 332.5)
-scale = Vector2(0.608854, 0.619444)
+position = Vector2(955, 538)
+scale = Vector2(1.00521, 1)
 texture = ExtResource("3_umtsp")
 
 [node name="taller-doc" type="Button" parent="."]
