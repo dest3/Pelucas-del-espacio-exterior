@@ -1,51 +1,35 @@
-[gd_scene load_steps=8 format=3 uid="uid://x4ioy5al6wqi"]
+[gd_scene load_steps=5 format=3 uid="uid://x4ioy5al6wqi"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_cffu0"]
-[ext_resource type="Texture2D" uid="uid://doicrx68penqc" path="res://Sprite e Imagenes/Pantallas gral- Pelucas (1).png" id="1_i8s7e"]
-[ext_resource type="Texture2D" path="res://Sprite e Imagenes/Taller fondo.png" id="2_c3r7c"]
-[ext_resource type="Texture2D" path="res://Sprite e Imagenes/Taller hud.png" id="4_2x4so"]
+[ext_resource type="Texture2D" uid="uid://cdwqxx7nsoidp" path="res://Sprite e Imagenes/Iconos.png" id="3_ikhgn"]
+[ext_resource type="Texture2D" uid="uid://c74qy33rwjyrc" path="res://Sprite e Imagenes/Hud Vacio.png" id="3_kfdf8"]
 [ext_resource type="Texture2D" uid="uid://fx2c7pta0tsw" path="res://Sprite e Imagenes/Carpeta Azul.png" id="4_qugrj"]
-[ext_resource type="Texture2D" path="res://Sprite e Imagenes/Volver.png" id="6_f4smf"]
-[ext_resource type="Texture2D" path="res://Sprite e Imagenes/Iconos inactivos.png" id="7_rag7k"]
 
 [node name="HUD" type="Node2D"]
 script = ExtResource("1_cffu0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Background" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(604, 340)
-scale = Vector2(0.6, 0.599074)
-texture = ExtResource("2_c3r7c")
+[node name="Panel" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(687.5, 362)
+scale = Vector2(0.711979, 0.67963)
+texture = ExtResource("3_kfdf8")
 
-[node name="Panel" type="Sprite2D" parent="CanvasLayer/Background"]
-texture = ExtResource("1_i8s7e")
+[node name="Iconos" type="TextureButton" parent="CanvasLayer/Panel"]
+offset_left = 795.669
+offset_top = -384.033
+offset_right = 943.669
+offset_bottom = -241.033
+texture_normal = ExtResource("3_ikhgn")
 
-[node name="Mensaje" type="Sprite2D" parent="CanvasLayer/Background/Panel"]
-texture = ExtResource("4_2x4so")
-
-[node name="Carpeta Azul" type="TextureButton" parent="CanvasLayer/Background/Panel"]
-offset_left = 801.667
-offset_top = -381.422
-offset_right = 949.667
-offset_bottom = -238.422
+[node name="Carpeta Azul" type="TextureButton" parent="CanvasLayer/Panel"]
+offset_left = 795.669
+offset_top = -379.618
+offset_right = 943.673
+offset_bottom = -236.618
 texture_normal = ExtResource("4_qugrj")
 
-[node name="Volver" type="TextureButton" parent="CanvasLayer/Background/Panel"]
-offset_left = 768.333
-offset_top = 292.118
-offset_right = 1010.33
-offset_bottom = 522.118
-scale = Vector2(0.569455, 0.57183)
-texture_normal = ExtResource("6_f4smf")
+[node name="Background" type="Sprite2D" parent="CanvasLayer/Panel"]
 
-[node name="Iconos Inactivos" type="TextureButton" parent="CanvasLayer/Background/Panel"]
-offset_left = 785.0
-offset_top = -431.499
-offset_right = 954.0
-offset_bottom = 268.501
-texture_normal = ExtResource("7_rag7k")
-
-[connection signal="pressed" from="CanvasLayer/Background/Panel/Carpeta Azul" to="." method="_on_archivos_pressed"]
-[connection signal="pressed" from="CanvasLayer/Background/Panel/Volver" to="." method="_on_archivos_pressed"]
-[connection signal="pressed" from="CanvasLayer/Background/Panel/Iconos Inactivos" to="." method="_on_archivos_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Iconos" to="." method="_on_archivos_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Carpeta Azul" to="." method="_on_archivos_pressed"]
