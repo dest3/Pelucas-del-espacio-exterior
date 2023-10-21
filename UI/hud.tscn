@@ -19,12 +19,8 @@ position = Vector2(581, 321.5)
 scale = Vector2(0.6, 0.599074)
 texture = ExtResource("2_lw5k8")
 
-[node name="Iconos" type="TextureButton" parent="CanvasLayer/Panel"]
-offset_left = 795.669
-offset_top = -384.033
-offset_right = 943.669
-offset_bottom = -241.033
-texture_normal = ExtResource("3_ikhgn")
+[node name="Panel" type="Sprite2D" parent="CanvasLayer/Background"]
+texture = ExtResource("1_i8s7e")
 
 [node name="Carpeta Azul" type="TextureButton" parent="CanvasLayer/Background/Panel"]
 offset_left = 796.667
