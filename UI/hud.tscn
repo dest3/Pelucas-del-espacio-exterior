@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://x4ioy5al6wqi"]
+[gd_scene load_steps=10 format=3 uid="uid://x4ioy5al6wqi"]
 
 [ext_resource type="Script" path="res://UI/hud.gd" id="1_mdiev"]
+[ext_resource type="Texture2D" uid="uid://bsxfuxp78inrw" path="res://escenas/assets/HUD/Taller hud.png" id="2_xerd4"]
 [ext_resource type="Texture2D" uid="uid://fx2c7pta0tsw" path="res://Sprite e Imagenes/Carpeta Azul.png" id="4_qugrj"]
 [ext_resource type="Texture2D" uid="uid://cgt25dlswqj8o" path="res://Sprite e Imagenes/Maquina de Escribir.png" id="4_yhv02"]
 [ext_resource type="Texture2D" uid="uid://b002bfpptv2lc" path="res://Sprite e Imagenes/Archivos.png" id="5_cv6sx"]
@@ -10,7 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://b1qnbtv5igely" path="res://escenas/assets/HUD/Volver.png" id="9_orori"]
 
 [node name="HUD" type="CanvasLayer"]
+layer = 3
 script = ExtResource("1_mdiev")
+
+[node name="TallerHud" type="Sprite2D" parent="."]
+position = Vector2(960, 538)
+texture = ExtResource("2_xerd4")
 
 [node name="carpeta_azul" type="TextureButton" parent="."]
 offset_left = 1774.0
@@ -43,11 +49,12 @@ offset_bottom = 761.0
 texture_normal = ExtResource("6_cwoff")
 
 [node name="volver" type="TextureButton" parent="."]
-offset_left = 1718.0
-offset_top = 777.0
-offset_right = 1922.0
-offset_bottom = 1029.0
+offset_left = 1673.0
+offset_top = 768.0
+offset_right = 1877.0
+offset_bottom = 1020.0
 texture_normal = ExtResource("7_m0j6r")
+metadata/_edit_group_ = true
 
 [node name="Volver" type="Sprite2D" parent="volver"]
 position = Vector2(115, 114)

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://khicl5c0p0us"]
+
+[ext_resource type="Texture2D" uid="uid://cp1m530psumxp" path="res://escenas/assets/Mini game diarios/Notas/Mi cucha/Mi cucha TEMPLATE.png" id="1_toauf"]
+[ext_resource type="PackedScene" uid="uid://boo0c0cmmj1yg" path="res://escenas/entidades/drop.tscn" id="2_6112p"]
+
+[node name="MiCuchaTemplate" type="Sprite2D"]
+scale = Vector2(0.441, 0.441)
+texture = ExtResource("1_toauf")
+
+[node name="drop" parent="." instance=ExtResource("2_6112p")]
+position = Vector2(244.898, -142.857)
+
+[node name="drop2" parent="." instance=ExtResource("2_6112p")]
+position = Vector2(-476.19, -342.404)
+
+[node name="drop3" parent="." instance=ExtResource("2_6112p")]
+position = Vector2(-487.528, 439.909)
+
+[node name="drop4" parent="." instance=ExtResource("2_6112p")]
+position = Vector2(226.757, 623.583)
+
+[node name="drop5" parent="." instance=ExtResource("2_6112p")]
+position = Vector2(-18.1406, -748.299)
+
+[node name="drop6" parent="." instance=ExtResource("2_6112p")]
+position = Vector2(-11.3379, -594.104)

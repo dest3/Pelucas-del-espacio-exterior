@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bp3c2tkeiiouq"]
+[gd_scene load_steps=10 format=3 uid="uid://bp3c2tkeiiouq"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_2puqo"]
 [ext_resource type="Texture2D" uid="uid://pwbr8o7fa8xc" path="res://escenas/assets/Menu/Jugar.png" id="2_fyyyq"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://0c8g7c4j2a13" path="res://escenas/assets/Menu/MENU - plantilla.png" id="5_8te85"]
 [ext_resource type="Texture2D" uid="uid://c08a8pt0jhjp6" path="res://escenas/assets/Menu/titulo.png" id="7_bdk4f"]
 [ext_resource type="Texture2D" uid="uid://c6boeu61unk0j" path="res://escenas/assets/Menu/Crunch.png" id="8_i6hhn"]
+[ext_resource type="AudioStream" uid="uid://4detfemwqbfj" path="res://escenas/assets/sonidos/Main SONG.wav" id="9_snpwj"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_2puqo")
@@ -22,7 +23,7 @@ size_flags_vertical = 6
 metadata/_edit_group_ = true
 
 [node name="Jugar" type="Sprite2D" parent="play"]
-position = Vector2(162.5, 87.75)
+position = Vector2(163, 85)
 scale = Vector2(1.03333, 1.07635)
 texture = ExtResource("2_fyyyq")
 region_enabled = true
@@ -88,6 +89,11 @@ position = Vector2(597, 215)
 texture = ExtResource("7_bdk4f")
 region_enabled = true
 region_rect = Rect2(0, 0, 1198.91, 433.641)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_snpwj")
+volume_db = -6.933
+autoplay = true
 
 [connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
 [connection signal="mouse_exited" from="play" to="." method="_on_play_mouse_exited"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4yqf03g7q5xo"
+path="res://.godot/imported/Lluvia #2.mp3-0d53b859684eb514077c939cecbed07e.mp3str"
+
+[deps]
+
+source_file="res://escenas/assets/sonidos/Lluvia #2.mp3"
+dest_files=["res://.godot/imported/Lluvia #2.mp3-0d53b859684eb514077c939cecbed07e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

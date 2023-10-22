@@ -13,15 +13,8 @@ func _on_creditos_pressed():
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://escenas/niveles/taller.tscn")
 
-
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://escenas/niveles/menu.tscn")
-
-func _on_tallerdoc_pressed():
-	get_tree().change_scene_to_file("res://escenas/niveles/taller.tscn")
-
-
-
 
 func _on_play_mouse_entered():
 	var boton = get_node("play/Jugar")
@@ -55,12 +48,13 @@ func _on_menu_mouse_exited():
 	var boton = get_node("menu/Salir")
 	boton.scale = Vector2(1,1)
 
-
 func _on_crunch_mouse_entered():
 	var boton = get_node("crunch/Crunch")
 	boton.scale = Vector2(1.1,1.1)
 
-
 func _on_crunch_mouse_exited():
 	var boton = get_node("crunch/Crunch")
 	boton.scale = Vector2(1,1)
+
+func _on_juego_de_documentos_pressed():
+	get_tree().change_scene_to_file("res://escenas/niveles/videos/documento_video_intro.tscn")
