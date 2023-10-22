@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://djve5msw3lj1a"]
+
+[ext_resource type="Texture2D" uid="uid://cc2fgrd0drpdg" path="res://escenas/assets/Mini game diarios/Notas/Mi cucha/Recortes/Recortes  Fail/Titular_fake.png" id="1_etpsx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnnkk"]
+size = Vector2(561, 66)
+
+[node name="titular_fake" type="Node2D"]
+
+[node name="ArchivosDiarioRecortesDrag" type="Sprite2D" parent="."]
+position = Vector2(-2, 0)
+scale = Vector2(0.441, 0.432)
+texture = ExtResource("1_etpsx")
+region_enabled = true
+region_rect = Rect2(46.9344, 58.8456, 1280.37, 176.493)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3.5, 0)
+shape = SubResource("RectangleShape2D_fnnkk")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

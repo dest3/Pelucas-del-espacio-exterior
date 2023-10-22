@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=8 format=3 uid="uid://77hjvakgytos"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_1humk"]
 [ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="2_hhv7i"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://7b83j81lnlat" path="res://escenas/assets/Pop Ups/Pop Up fondo.png" id="5_nnilh"]
 [ext_resource type="Texture2D" uid="uid://bufnk48l5j330" path="res://escenas/assets/Mini game diarios/Fondo gameplay 1.png" id="6_vomnt"]
 [ext_resource type="PackedScene" uid="uid://khicl5c0p0us" path="res://escenas/niveles/notas/micuchatemplate.tscn" id="7_ee4vg"]
-[ext_resource type="PackedScene" uid="uid://b1lxbpse4jaua" path="res://escenas/niveles/notas/fotoFake2.tscn" id="8_svx4m"]
 
 [node name="Doc_game" type="Node2D"]
 script = ExtResource("1_1humk")
@@ -18,7 +17,28 @@ position = Vector2(961, 536)
 texture = ExtResource("3_3m4sr")
 
 [node name="origen" parent="." instance=ExtResource("4_iv8s4")]
-position = Vector2(955, 335)
+position = Vector2(381, 223)
+
+[node name="origen2" parent="." instance=ExtResource("4_iv8s4")]
+position = Vector2(119, 143)
+
+[node name="origen3" parent="." instance=ExtResource("4_iv8s4")]
+position = Vector2(122, 397)
+
+[node name="origen4" parent="." instance=ExtResource("4_iv8s4")]
+position = Vector2(458, 442)
+
+[node name="origen5" parent="." instance=ExtResource("4_iv8s4")]
+position = Vector2(90, 600)
+
+[node name="origen6" parent="." instance=ExtResource("4_iv8s4")]
+position = Vector2(333, 643)
+
+[node name="origen7" parent="." instance=ExtResource("4_iv8s4")]
+position = Vector2(640, 309)
+
+[node name="origen8" parent="." instance=ExtResource("4_iv8s4")]
+position = Vector2(573, 597)
 
 [node name="PopUpFondo" type="Sprite2D" parent="."]
 visible = false
@@ -42,8 +62,5 @@ texture = ExtResource("6_vomnt")
 
 [node name="MiCuchaTemplate" parent="." instance=ExtResource("7_ee4vg")]
 position = Vector2(1164, 485)
-
-[node name="objeto" parent="." instance=ExtResource("8_svx4m")]
-position = Vector2(210, 190)
 
 [node name="HUD" parent="." instance=ExtResource("2_hhv7i")]
