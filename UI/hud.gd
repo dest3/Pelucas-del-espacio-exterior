@@ -4,7 +4,7 @@ extends CanvasLayer
 
 
 func _on_carpeta_azul_pressed():
-	pass
+	get_tree().change_scene_to_file("res://escenas/niveles/inventario.tscn")
 
 
 func _on_maquina_de_escribir_pressed():

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://db88nn5flj8j6"]
+
+[ext_resource type="Script" path="res://escenas/niveles/Timer.gd" id="1_v6dp3"]
+[ext_resource type="Texture2D" uid="uid://cn21a2a0bblf8" path="res://escenas/assets/Mini game diarios/Reloj.png" id="2_83is3"]
+[ext_resource type="FontFile" uid="uid://dv47uia6c1wpo" path="res://escenas/assets/fonts/DS-DIGI.TTF" id="3_eney2"]
+
+[node name="Timer" type="Timer"]
+wait_time = 10.296
+one_shot = true
+autostart = true
+script = ExtResource("1_v6dp3")
+
+[node name="Reloj" type="Sprite2D" parent="."]
+position = Vector2(961, 545)
+texture = ExtResource("2_83is3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 86.0
+offset_right = 185.0
+offset_bottom = 147.0
+theme_override_fonts/font = ExtResource("3_eney2")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

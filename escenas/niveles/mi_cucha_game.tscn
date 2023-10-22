@@ -1,13 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=14 format=3 uid="uid://77hjvakgytos"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_1humk"]
 [ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="2_hhv7i"]
 [ext_resource type="Texture2D" uid="uid://cnrjlkago6job" path="res://escenas/assets/HUD/Juego gameplay Hud.png" id="3_3m4sr"]
 [ext_resource type="PackedScene" uid="uid://dsclclrq2wjbu" path="res://escenas/entidades/origen.tscn" id="4_iv8s4"]
-[ext_resource type="Texture2D" uid="uid://7b83j81lnlat" path="res://escenas/assets/Pop Ups/Pop Up fondo.png" id="5_nnilh"]
 [ext_resource type="Texture2D" uid="uid://bufnk48l5j330" path="res://escenas/assets/Mini game diarios/Fondo gameplay 1.png" id="6_vomnt"]
+[ext_resource type="PackedScene" uid="uid://vobwm544qr51" path="res://escenas/niveles/notas/recortes/win/foto_win2.tscn" id="7_b8hvb"]
 [ext_resource type="PackedScene" uid="uid://khicl5c0p0us" path="res://escenas/niveles/notas/micuchatemplate.tscn" id="7_ee4vg"]
 [ext_resource type="PackedScene" uid="uid://cy1xpffernohi" path="res://escenas/niveles/notas/recortes/win/foto_win.tscn" id="8_fbrjv"]
+[ext_resource type="PackedScene" uid="uid://sst8tgl13dw3" path="res://escenas/niveles/notas/recortes/win/sub_win.tscn" id="9_avgrh"]
+[ext_resource type="PackedScene" uid="uid://bstl8suf3h3b7" path="res://escenas/niveles/notas/recortes/win/texto2_win.tscn" id="10_7vyje"]
+[ext_resource type="PackedScene" uid="uid://duy8divy5wmjf" path="res://escenas/niveles/notas/recortes/win/texto_win.tscn" id="11_730r7"]
+[ext_resource type="PackedScene" uid="uid://dlol0mkxdfsv2" path="res://escenas/niveles/notas/recortes/win/titular_win.tscn" id="12_188xt"]
+[ext_resource type="PackedScene" uid="uid://db88nn5flj8j6" path="res://escenas/entidades/timer.tscn" id="13_2utmd"]
 
 [node name="Doc_game" type="Node2D"]
 script = ExtResource("1_1humk")
@@ -18,43 +23,7 @@ position = Vector2(961, 536)
 texture = ExtResource("3_3m4sr")
 
 [node name="origen" parent="." instance=ExtResource("4_iv8s4")]
-position = Vector2(381, 223)
-
-[node name="origen2" parent="." instance=ExtResource("4_iv8s4")]
-position = Vector2(119, 143)
-
-[node name="origen3" parent="." instance=ExtResource("4_iv8s4")]
-position = Vector2(122, 397)
-
-[node name="origen4" parent="." instance=ExtResource("4_iv8s4")]
-position = Vector2(458, 442)
-
-[node name="origen5" parent="." instance=ExtResource("4_iv8s4")]
-position = Vector2(90, 600)
-
-[node name="origen6" parent="." instance=ExtResource("4_iv8s4")]
-position = Vector2(333, 643)
-
-[node name="origen7" parent="." instance=ExtResource("4_iv8s4")]
-position = Vector2(640, 309)
-
-[node name="origen8" parent="." instance=ExtResource("4_iv8s4")]
-position = Vector2(573, 597)
-
-[node name="PopUpFondo" type="Sprite2D" parent="."]
-visible = false
-modulate = Color(0.141176, 0.647059, 0.509804, 1)
-position = Vector2(923, 538)
-scale = Vector2(0.591407, 0.539815)
-texture = ExtResource("5_nnilh")
-metadata/_edit_group_ = true
-
-[node name="PopUpFondo2" type="Sprite2D" parent="PopUpFondo"]
-modulate = Color(0, 0, 0, 1)
-z_index = -1
-position = Vector2(5.07251, 0)
-scale = Vector2(1.01, 1.01)
-texture = ExtResource("5_nnilh")
+position = Vector2(503, 490)
 
 [node name="FondoGameplay1" type="Sprite2D" parent="."]
 z_index = -10
@@ -62,9 +31,26 @@ position = Vector2(959, 539)
 texture = ExtResource("6_vomnt")
 
 [node name="MiCuchaTemplate" parent="." instance=ExtResource("7_ee4vg")]
-position = Vector2(1164, 485)
+position = Vector2(1355, 477)
+
+[node name="foto_win2" parent="." instance=ExtResource("7_b8hvb")]
+position = Vector2(390, 669)
+
+[node name="foto_win" parent="." instance=ExtResource("8_fbrjv")]
+position = Vector2(261, 137)
+
+[node name="sub_win" parent="." instance=ExtResource("9_avgrh")]
+position = Vector2(707, 133)
+
+[node name="texto2_win" parent="." instance=ExtResource("10_7vyje")]
+position = Vector2(785, 658)
+
+[node name="texto_win" parent="." instance=ExtResource("11_730r7")]
+position = Vector2(318, 465)
+
+[node name="titular_win" parent="." instance=ExtResource("12_188xt")]
+position = Vector2(734, 405)
 
 [node name="HUD" parent="." instance=ExtResource("2_hhv7i")]
 
-[node name="foto_win" parent="." instance=ExtResource("8_fbrjv")]
-position = Vector2(-379, 374)
+[node name="Timer" parent="." instance=ExtResource("13_2utmd")]

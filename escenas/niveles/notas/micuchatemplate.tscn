@@ -9,18 +9,24 @@ texture = ExtResource("1_toauf")
 
 [node name="drop" parent="." instance=ExtResource("2_6112p")]
 position = Vector2(244.898, -142.857)
+respuesta = "foto_win2"
 
 [node name="drop2" parent="." instance=ExtResource("2_6112p")]
 position = Vector2(-476.19, -342.404)
+respuesta = "foto_win"
 
 [node name="drop3" parent="." instance=ExtResource("2_6112p")]
 position = Vector2(-487.528, 439.909)
+respuesta = "texto_win"
 
 [node name="drop4" parent="." instance=ExtResource("2_6112p")]
 position = Vector2(226.757, 623.583)
+respuesta = "texto2_win"
 
 [node name="drop5" parent="." instance=ExtResource("2_6112p")]
 position = Vector2(-18.1406, -748.299)
+respuesta = "titular_win"
 
 [node name="drop6" parent="." instance=ExtResource("2_6112p")]
 position = Vector2(-11.3379, -594.104)
+respuesta = "sub_win"

@@ -7,29 +7,13 @@ signal drag_ended
 
 
 #defino variables 
-var nombre = "hola"
+var nombre = ""
 var selected = false #si esta seleccionado o no
 var rest_point 
 var rest_nodes= []
 var body_ref
 var is_inside_dropable = false
 var mouse_over= false
-
-func _ready():
-	get_rest_point()
-
-#cuando se le hace click al objeto, selected se pone verdadero
-func _on_area_2d_input_event(_viewport, event, _shape_idx):
-	down_click_izq(event)
-
-#si esta seleccionado todo el tiempo se pociciona en donde este el mouse
-func _physics_process(delta):
-	drag(delta)
-
-#si se le deja de hacer click al bojeto se desactvia selected y queda en el ultimo lugar que tuvo 
-func _input(event):
-	up_click_izq(event)
-	down_click_izq(event)
 
 
 #si esta selected cambia la ubicacion del objeto con la del mouse
@@ -58,7 +42,7 @@ func up_click_izq(event):
 			global_var.is_draging = false
 			selected= false
 			emit_signal("drag_ended", event.position)
-			last_rest()
+			#last_rest()
 			
 
 #si suelta el click
@@ -70,10 +54,9 @@ func down_click_izq(event):
 
 #obtiene los puntos de anclaje al principio del nivel.
 func get_rest_point():
-	var random:int = randi() % 7
 	rest_nodes = get_tree().get_nodes_in_group("zona")
 	rest_point = rest_nodes[0].global_position
-	rest_nodes[random].select()
+	rest_nodes[0].select()
 	
 #mouse over
 func _on_area_2d_mouse_entered():
@@ -85,12 +68,17 @@ func _on_area_2d_mouse_exited():
 		mouse_over = false
 
 #aca compruebo si es correcta la ubicacion y acomodo en patalla
-func _on_area_2d_body_entered(body: StaticBody2D):
+func _on_area_2d_body_entered(body: StaticBody2D,):
 	print("aguante godot ")
 	if body.is_in_group("respuesta") and body.respuesta == nombre:
-		
+		# El cuerpo es correcto
 		body_ref = body
+		is_inside_dropable = true
 		print(nombre)
+	else:
+		# El cuerpo no es correcto
+		pass
+
 #genera un numero aleatorio
 func random(min: int, max: int, cantidad: int, )-> Array:
 	var random_numbers = []

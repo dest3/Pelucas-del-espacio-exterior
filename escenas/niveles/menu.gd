@@ -58,3 +58,6 @@ func _on_crunch_mouse_exited():
 
 func _on_juego_de_documentos_pressed():
 	get_tree().change_scene_to_file("res://escenas/niveles/videos/documento_video_intro.tscn")
+
+func _on_salir_inventario_pressed():
+	get_tree().change_scene_to_file("res://escenas/niveles/taller.tscn")

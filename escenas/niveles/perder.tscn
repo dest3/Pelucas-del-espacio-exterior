@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b001pj3cq83ky"]
+
+[ext_resource type="Texture2D" uid="uid://bpvcm6gt52q85" path="res://escenas/assets/Pop Ups/Perder.png" id="1_sl6g5"]
+[ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="2_wksoi"]
+[ext_resource type="Texture2D" uid="uid://k1vd4t5is73b" path="res://escenas/assets/HUD/barra de nav.png" id="3_2f7va"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(516, 299)
+
+[node name="Perder" type="Sprite2D" parent="."]
+position = Vector2(444, 240)
+texture = ExtResource("1_sl6g5")
+
+[node name="HUD" parent="." instance=ExtResource("2_wksoi")]
+
+[node name="BarraDeNav" type="Sprite2D" parent="."]
+position = Vector2(1306, 189)
+texture = ExtResource("3_2f7va")

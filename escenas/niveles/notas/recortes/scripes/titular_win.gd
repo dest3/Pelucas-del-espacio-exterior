@@ -2,6 +2,7 @@ extends Documento
 
 
 func _ready():
+	nombre = "titular_win"
 	get_rest_point()
 
 #cuando se le hace click al objeto, selected se pone verdadero
