@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://f2eptnhgdtm6"]
+[gd_scene load_steps=5 format=3 uid="uid://f2eptnhgdtm6"]
 
 [ext_resource type="Texture2D" uid="uid://irs1fxeckurp" path="res://escenas/assets/Main - Taller de Investigación/Pantallas gral- Pelucas.png" id="1_w8d0k"]
 [ext_resource type="Texture2D" uid="uid://ciwwfam5wx180" path="res://escenas/assets/Main - Taller de Investigación/Fondo Main.png" id="2_cmdu3"]
+[ext_resource type="Texture2D" uid="uid://bsxfuxp78inrw" path="res://escenas/assets/HUD/Taller hud.png" id="3_2wujx"]
+[ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="3_yf2dn"]
 
 [node name="taller" type="Node2D"]
 position = Vector2(631, 281)
@@ -15,3 +17,9 @@ texture = ExtResource("1_w8d0k")
 z_index = -1
 position = Vector2(330, 260)
 texture = ExtResource("2_cmdu3")
+
+[node name="TallerHud" type="Sprite2D" parent="."]
+position = Vector2(329, 259)
+texture = ExtResource("3_2wujx")
+
+[node name="HUD" parent="." instance=ExtResource("3_yf2dn")]

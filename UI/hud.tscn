@@ -1,51 +1,67 @@
-[gd_scene load_steps=8 format=3 uid="uid://x4ioy5al6wqi"]
+[gd_scene load_steps=9 format=3 uid="uid://x4ioy5al6wqi"]
 
-[ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_cffu0"]
-[ext_resource type="Texture2D" uid="uid://doicrx68penqc" path="res://Sprite e Imagenes/Pantallas gral- Pelucas (1).png" id="1_i8s7e"]
-[ext_resource type="Texture2D" path="res://Sprite e Imagenes/Taller fondo.png" id="2_c3r7c"]
-[ext_resource type="Texture2D" path="res://Sprite e Imagenes/Taller hud.png" id="4_2x4so"]
+[ext_resource type="Script" path="res://UI/hud.gd" id="1_mdiev"]
 [ext_resource type="Texture2D" uid="uid://fx2c7pta0tsw" path="res://Sprite e Imagenes/Carpeta Azul.png" id="4_qugrj"]
-[ext_resource type="Texture2D" path="res://Sprite e Imagenes/Volver.png" id="6_f4smf"]
-[ext_resource type="Texture2D" path="res://Sprite e Imagenes/Iconos inactivos.png" id="7_rag7k"]
+[ext_resource type="Texture2D" uid="uid://cgt25dlswqj8o" path="res://Sprite e Imagenes/Maquina de Escribir.png" id="4_yhv02"]
+[ext_resource type="Texture2D" uid="uid://b002bfpptv2lc" path="res://Sprite e Imagenes/Archivos.png" id="5_cv6sx"]
+[ext_resource type="Texture2D" uid="uid://dk1gcu8vej643" path="res://Sprite e Imagenes/Maquina de Cine.png" id="6_cwoff"]
+[ext_resource type="Texture2D" uid="uid://dew7bfjngbr4h" path="res://escenas/assets/HUD/volver_papel.png" id="7_m0j6r"]
+[ext_resource type="Texture2D" uid="uid://bwrls8mb736ch" path="res://escenas/assets/HUD/Iconos inactivos.png" id="8_4dbrn"]
+[ext_resource type="Texture2D" uid="uid://b1qnbtv5igely" path="res://escenas/assets/HUD/Volver.png" id="9_orori"]
 
-[node name="HUD" type="Node2D"]
-script = ExtResource("1_cffu0")
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_mdiev")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Background" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(604, 340)
-scale = Vector2(0.6, 0.599074)
-texture = ExtResource("2_c3r7c")
-
-[node name="Panel" type="Sprite2D" parent="CanvasLayer/Background"]
-texture = ExtResource("1_i8s7e")
-
-[node name="Mensaje" type="Sprite2D" parent="CanvasLayer/Background/Panel"]
-texture = ExtResource("4_2x4so")
-
-[node name="Carpeta Azul" type="TextureButton" parent="CanvasLayer/Background/Panel"]
-offset_left = 801.667
-offset_top = -381.422
-offset_right = 949.667
-offset_bottom = -238.422
+[node name="carpeta_azul" type="TextureButton" parent="."]
+offset_left = 1774.0
+offset_top = 138.0
+offset_right = 1922.0
+offset_bottom = 281.0
 texture_normal = ExtResource("4_qugrj")
 
-[node name="Volver" type="TextureButton" parent="CanvasLayer/Background/Panel"]
-offset_left = 768.333
-offset_top = 292.118
-offset_right = 1010.33
-offset_bottom = 522.118
-scale = Vector2(0.569455, 0.57183)
-texture_normal = ExtResource("6_f4smf")
+[node name="maquina_de_escribir" type="TextureButton" parent="."]
+offset_left = 1801.0
+offset_top = 295.0
+offset_right = 1920.0
+offset_bottom = 438.0
+texture_normal = ExtResource("4_yhv02")
 
-[node name="Iconos Inactivos" type="TextureButton" parent="CanvasLayer/Background/Panel"]
-offset_left = 785.0
-offset_top = -431.499
-offset_right = 954.0
-offset_bottom = 268.501
-texture_normal = ExtResource("7_rag7k")
+[node name="documentos" type="TextureButton" parent="."]
+visible = false
+offset_left = 1804.0
+offset_top = 464.0
+offset_right = 1921.0
+offset_bottom = 607.0
+texture_normal = ExtResource("5_cv6sx")
 
-[connection signal="pressed" from="CanvasLayer/Background/Panel/Carpeta Azul" to="." method="_on_archivos_pressed"]
-[connection signal="pressed" from="CanvasLayer/Background/Panel/Volver" to="." method="_on_archivos_pressed"]
-[connection signal="pressed" from="CanvasLayer/Background/Panel/Iconos Inactivos" to="." method="_on_archivos_pressed"]
+[node name="maquina de video" type="TextureButton" parent="."]
+visible = false
+offset_left = 1799.0
+offset_top = 601.0
+offset_right = 1916.0
+offset_bottom = 761.0
+texture_normal = ExtResource("6_cwoff")
+
+[node name="volver" type="TextureButton" parent="."]
+offset_left = 1718.0
+offset_top = 777.0
+offset_right = 1922.0
+offset_bottom = 1029.0
+texture_normal = ExtResource("7_m0j6r")
+
+[node name="Volver" type="Sprite2D" parent="volver"]
+position = Vector2(115, 114)
+scale = Vector2(0.626087, 0.626087)
+texture = ExtResource("9_orori")
+
+[node name="IconosInactivos" type="Sprite2D" parent="."]
+position = Vector2(1836, 562)
+texture = ExtResource("8_4dbrn")
+region_enabled = true
+region_rect = Rect2(-4.07788, 165.596, 180.377, 539.521)
+
+[connection signal="pressed" from="carpeta_azul" to="." method="_on_carpeta_azul_pressed"]
+[connection signal="pressed" from="maquina_de_escribir" to="." method="_on_maquina_de_escribir_pressed"]
+[connection signal="pressed" from="documentos" to="." method="_on_documentos_pressed"]
+[connection signal="pressed" from="maquina de video" to="." method="_on_maquina_de_video_pressed"]
+[connection signal="pressed" from="volver" to="." method="_on_volver_pressed"]
