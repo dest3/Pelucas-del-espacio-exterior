@@ -70,10 +70,11 @@ func down_click_izq(event):
 
 #obtiene los puntos de anclaje al principio del nivel.
 func get_rest_point():
+	var random:int = randi() % 7
 	rest_nodes = get_tree().get_nodes_in_group("zona")
 	rest_point = rest_nodes[0].global_position
-	rest_nodes[0].select()
-
+	rest_nodes[random].select()
+	
 #mouse over
 func _on_area_2d_mouse_entered():
 	scale = Vector2(1.05, 1.05)
@@ -83,10 +84,18 @@ func _on_area_2d_mouse_exited():
 		scale = Vector2(1.0, 1.0)
 		mouse_over = false
 
-
+#aca compruebo si es correcta la ubicacion y acomodo en patalla
 func _on_area_2d_body_entered(body: StaticBody2D):
 	print("aguante godot ")
 	if body.is_in_group("respuesta") and body.respuesta == nombre:
 		
 		body_ref = body
 		print(nombre)
+#genera un numero aleatorio
+func random(min: int, max: int, cantidad: int, )-> Array:
+	var random_numbers = []
+	while random_numbers.size() < cantidad:
+		var new_number =  randi_range(min,max)
+		if not random_numbers.has(new_number):
+			random_numbers.append(new_number)
+	return random_numbers

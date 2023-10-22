@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=9 format=3 uid="uid://77hjvakgytos"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_1humk"]
 [ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="2_hhv7i"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://7b83j81lnlat" path="res://escenas/assets/Pop Ups/Pop Up fondo.png" id="5_nnilh"]
 [ext_resource type="Texture2D" uid="uid://bufnk48l5j330" path="res://escenas/assets/Mini game diarios/Fondo gameplay 1.png" id="6_vomnt"]
 [ext_resource type="PackedScene" uid="uid://khicl5c0p0us" path="res://escenas/niveles/notas/micuchatemplate.tscn" id="7_ee4vg"]
+[ext_resource type="PackedScene" uid="uid://cy1xpffernohi" path="res://escenas/niveles/notas/recortes/win/foto_win.tscn" id="8_fbrjv"]
 
 [node name="Doc_game" type="Node2D"]
 script = ExtResource("1_1humk")
@@ -64,3 +65,6 @@ texture = ExtResource("6_vomnt")
 position = Vector2(1164, 485)
 
 [node name="HUD" parent="." instance=ExtResource("2_hhv7i")]
+
+[node name="foto_win" parent="." instance=ExtResource("8_fbrjv")]
+position = Vector2(-379, 374)
