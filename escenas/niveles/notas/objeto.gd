@@ -22,18 +22,11 @@ func drag(delta):
 		global_position = lerp(global_position, get_global_mouse_position(), 25 * delta)#calcula el offset y mueve el objeto a la pos del mouse
 		#look_at(get_global_mouse_position()) #obtiene la hubicacion del mouse
 	else:
-		global_position = lerp(global_position, rest_point, 10 * delta) #hace que la posicion del objeto sea el ultimo rest point
-		rotation = lerp_angle(rotation, 0, 10 * delta)#vuelve al angulo por defecto del objeto al soltarlo
+		if !is_inside_dropable:
+			global_position = lerp(global_position, rest_point, 10 * delta) #hace que la posicion del objeto sea el ultimo rest point
+			rotation = lerp_angle(rotation, 0, 10 * delta)#vuelve al angulo por defecto del objeto al soltarlo
 
 #obtiene todos los puntos de anclaje iniciales y setea como origen
-func last_rest():
-	var shortest_dist = 75 #la distancia mas corta posible para dejar el objeto cerca de la znoa de drop (tamaño de la zona de drop)
-	for child in rest_nodes:
-		var distance = global_position.distance_to(child.global_position)
-		if distance < shortest_dist:
-			child.select()
-			rest_point = child.global_position
-			shortest_dist = distance
 
 #si hace click
 func up_click_izq(event):
@@ -68,22 +61,18 @@ func _on_area_2d_mouse_exited():
 		mouse_over = false
 
 #aca compruebo si es correcta la ubicacion y acomodo en patalla
-func _on_area_2d_body_entered(body: StaticBody2D,):
-	print("aguante godot ")
+func _on_area_2d_body_entered(body: StaticBody2D):
+	print("colision")
 	if body.is_in_group("respuesta") and body.respuesta == nombre:
 		# El cuerpo es correcto
 		body_ref = body
 		is_inside_dropable = true
 		print(nombre)
+		selected=false
+		# Cambiar la posición del objeto para que coincida con la del cuerpo
+		global_position = body.global_position
 	else:
-		# El cuerpo no es correcto
 		pass
+		
 
-#genera un numero aleatorio
-func random(min: int, max: int, cantidad: int, )-> Array:
-	var random_numbers = []
-	while random_numbers.size() < cantidad:
-		var new_number =  randi_range(min,max)
-		if not random_numbers.has(new_number):
-			random_numbers.append(new_number)
-	return random_numbers
+
