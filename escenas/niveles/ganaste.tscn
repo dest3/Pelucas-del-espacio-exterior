@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cljiym6v8b0v1"]
+
+[ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_8sl30"]
+[ext_resource type="Texture2D" uid="uid://clgitpyn71p7i" path="res://escenas/assets/Pop Ups/Ganar.png" id="1_iktwp"]
+[ext_resource type="Texture2D" uid="uid://c1mynkupxo5hy" path="res://escenas/assets/Pop Ups/Copia de Salir.png" id="3_xrxee"]
+
+[node name="ganaste" type="Node2D"]
+position = Vector2(352, 235)
+script = ExtResource("1_8sl30")
+
+[node name="Ganar" type="Sprite2D" parent="."]
+position = Vector2(611, 304)
+texture = ExtResource("1_iktwp")
+
+[node name="volver_ganar" type="TextureButton" parent="."]
+offset_left = 1438.0
+offset_top = -714.0
+offset_right = 2332.0
+offset_bottom = -15.0
+rotation = 0.670206
+texture_normal = ExtResource("3_xrxee")
+
+[connection signal="pressed" from="volver_ganar" to="." method="_on_volver_ganar_pressed"]

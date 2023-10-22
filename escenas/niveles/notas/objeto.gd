@@ -14,6 +14,8 @@ var rest_nodes= []
 var body_ref
 var is_inside_dropable = false
 var mouse_over= false
+var drops = []
+var cant_correcta = 0
 
 
 #si esta selected cambia la ubicacion del objeto con la del mouse
@@ -71,8 +73,31 @@ func _on_area_2d_body_entered(body: StaticBody2D):
 		selected=false
 		# Cambiar la posición del objeto para que coincida con la del cuerpo
 		global_position = body.global_position
-	else:
-		pass
-		
+		body_ref.fill = true
+
+func get_drop():
+	drops = get_tree().get_nodes_in_group("respuesta")
+	for item in drops:
+		if item.fill == true:
+			cant_correcta = cant_correcta +1
+	
+func ganaste():
+		get_tree().change_scene_to_file("res://escenas/niveles/ganaste.tscn")
+
+
+func _process(_delta):
+	update_drop_count()
+	check_victory()
+
+func update_drop_count():
+	cant_correcta = 0
+	get_drop()
+
+func check_victory():
+	if cant_correcta >= 6:
+		ganaste()
+
+
+
 
 

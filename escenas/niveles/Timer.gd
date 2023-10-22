@@ -6,7 +6,7 @@ var label
 func _ready():
 	label = get_node("Label")
 	
-func _process(delta):
+func _process(_delta):
 	label.set_text(str(time_left))
 
 func _on_timeout():

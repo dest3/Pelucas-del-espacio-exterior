@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 @export var respuesta = ""
-
+var fill = false
 
 func _ready():
 	modulate = Color(Color.MEDIUM_PURPLE,0.7)

@@ -1,18 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://b001pj3cq83ky"]
 
 [ext_resource type="Texture2D" uid="uid://bpvcm6gt52q85" path="res://escenas/assets/Pop Ups/Perder.png" id="1_sl6g5"]
-[ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="2_wksoi"]
-[ext_resource type="Texture2D" uid="uid://k1vd4t5is73b" path="res://escenas/assets/HUD/barra de nav.png" id="3_2f7va"]
+[ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_y620n"]
+[ext_resource type="Texture2D" uid="uid://c1mynkupxo5hy" path="res://escenas/assets/Pop Ups/Copia de Salir.png" id="3_ubp1n"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(516, 299)
+script = ExtResource("1_y620n")
 
 [node name="Perder" type="Sprite2D" parent="."]
 position = Vector2(444, 240)
 texture = ExtResource("1_sl6g5")
 
-[node name="HUD" parent="." instance=ExtResource("2_wksoi")]
+[node name="volver_perder" type="TextureButton" parent="."]
+offset_left = 1379.0
+offset_top = -768.0
+offset_right = 2273.0
+offset_bottom = -69.0001
+rotation = 0.837758
+texture_normal = ExtResource("3_ubp1n")
 
-[node name="BarraDeNav" type="Sprite2D" parent="."]
-position = Vector2(1306, 189)
-texture = ExtResource("3_2f7va")
+[connection signal="pressed" from="volver_perder" to="." method="_on_volver_perder_pressed"]
