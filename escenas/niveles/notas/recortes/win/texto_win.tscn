@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnnkk"]
 size = Vector2(195, 379)
 
-[node name="texto_win" type="Node2D"]
+[node name="texto_win" type="Node2D" groups=["recortes"]]
 script = ExtResource("1_t3b45")
 
 [node name="ArchivosDiarioRecortesDrag" type="Sprite2D" parent="."]

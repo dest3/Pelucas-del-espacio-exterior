@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=15 format=3 uid="uid://77hjvakgytos"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_1humk"]
 [ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="2_hhv7i"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://duy8divy5wmjf" path="res://escenas/niveles/notas/recortes/win/texto_win.tscn" id="11_730r7"]
 [ext_resource type="PackedScene" uid="uid://dlol0mkxdfsv2" path="res://escenas/niveles/notas/recortes/win/titular_win.tscn" id="12_188xt"]
 [ext_resource type="PackedScene" uid="uid://db88nn5flj8j6" path="res://escenas/entidades/timer.tscn" id="13_2utmd"]
+[ext_resource type="PackedScene" uid="uid://c37scwvog18g4" path="res://escenas/entidades/paper_getter.tscn" id="14_gqps8"]
 
 [node name="Doc_game" type="Node2D"]
 script = ExtResource("1_1humk")
@@ -54,3 +55,5 @@ position = Vector2(734, 405)
 [node name="HUD" parent="." instance=ExtResource("2_hhv7i")]
 
 [node name="Timer" parent="." instance=ExtResource("13_2utmd")]
+
+[node name="paper_getter" parent="." instance=ExtResource("14_gqps8")]

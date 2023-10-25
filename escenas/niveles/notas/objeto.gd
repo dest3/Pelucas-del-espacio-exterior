@@ -16,16 +16,18 @@ var is_inside_dropable = false
 var mouse_over= false
 var drops = []
 var cant_correcta = 0
+var offset:Vector2 
 
+var paper_stack = []
+var paper 
 
 #si esta selected cambia la ubicacion del objeto con la del mouse
 func drag(delta):
 	if selected:
-		global_position = lerp(global_position, get_global_mouse_position(), 25 * delta)#calcula el offset y mueve el objeto a la pos del mouse
-		#look_at(get_global_mouse_position()) #obtiene la hubicacion del mouse
+		global_position = get_global_mouse_position() - offset
 	else:
 		if !is_inside_dropable:
-			global_position = lerp(global_position, rest_point, 10 * delta) #hace que la posicion del objeto sea el ultimo rest point
+			#global_position = lerp(global_position, rest_point, 10 * delta) #hace que la posicion del objeto sea el ultimo rest point
 			rotation = lerp_angle(rotation, 0, 10 * delta)#vuelve al angulo por defecto del objeto al soltarlo
 
 #obtiene todos los puntos de anclaje iniciales y setea como origen
@@ -46,6 +48,7 @@ func down_click_izq(event):
 		selected = true
 		emit_signal("drag_started",event.position)
 		global_var.is_draging = true
+		offset =  get_global_mouse_position() - global_position
 
 #obtiene los puntos de anclaje al principio del nivel.
 func get_rest_point():
@@ -98,3 +101,16 @@ func check_victory():
 		ganaste()
 
 
+func add_paper(paper):
+	paper_stack.append(paper)
+	
+	var count = 0
+	for p in paper_stack:
+		p.z_index = count
+		
+		count += 1
+
+
+func push_paper_to_top(paper):
+	paper_stack.erase(paper)
+	add_paper(paper.nombre)
