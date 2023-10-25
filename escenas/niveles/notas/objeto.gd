@@ -98,6 +98,3 @@ func check_victory():
 		ganaste()
 
 
-
-
-
