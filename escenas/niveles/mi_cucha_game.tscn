@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=21 format=3 uid="uid://77hjvakgytos"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_1humk"]
 [ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="2_hhv7i"]
@@ -12,8 +12,14 @@
 [ext_resource type="PackedScene" uid="uid://bstl8suf3h3b7" path="res://escenas/niveles/notas/recortes/win/texto2_win.tscn" id="10_7vyje"]
 [ext_resource type="PackedScene" uid="uid://duy8divy5wmjf" path="res://escenas/niveles/notas/recortes/win/texto_win.tscn" id="11_730r7"]
 [ext_resource type="PackedScene" uid="uid://dlol0mkxdfsv2" path="res://escenas/niveles/notas/recortes/win/titular_win.tscn" id="12_188xt"]
+[ext_resource type="PackedScene" uid="uid://xtph1180eab3" path="res://escenas/niveles/notas/recortes/fail/foto_fake2.tscn" id="12_nhlyf"]
 [ext_resource type="PackedScene" uid="uid://db88nn5flj8j6" path="res://escenas/entidades/timer.tscn" id="13_2utmd"]
+[ext_resource type="PackedScene" uid="uid://mb5in1pscp1n" path="res://escenas/niveles/notas/recortes/fail/foto_fake.tscn" id="13_qsnv5"]
+[ext_resource type="PackedScene" uid="uid://7qenr3xaquud" path="res://escenas/niveles/notas/recortes/fail/sub_fake.tscn" id="14_dpykp"]
 [ext_resource type="PackedScene" uid="uid://c37scwvog18g4" path="res://escenas/entidades/paper_getter.tscn" id="14_gqps8"]
+[ext_resource type="PackedScene" uid="uid://ds144iyw4ectl" path="res://escenas/niveles/notas/recortes/fail/texto_fake2.tscn" id="15_o0qnh"]
+[ext_resource type="PackedScene" uid="uid://ddfkjak7818om" path="res://escenas/niveles/notas/recortes/fail/texto_fake.tscn" id="16_1qgoc"]
+[ext_resource type="PackedScene" uid="uid://djve5msw3lj1a" path="res://escenas/niveles/notas/recortes/fail/titular_fake.tscn" id="17_gd3pl"]
 
 [node name="Doc_game" type="Node2D"]
 script = ExtResource("1_1humk")
@@ -34,23 +40,43 @@ texture = ExtResource("6_vomnt")
 [node name="MiCuchaTemplate" parent="." instance=ExtResource("7_ee4vg")]
 position = Vector2(1355, 477)
 
-[node name="foto_win2" parent="." instance=ExtResource("7_b8hvb")]
-position = Vector2(390, 669)
+[node name="recortes" type="Node2D" parent="."]
 
-[node name="foto_win" parent="." instance=ExtResource("8_fbrjv")]
-position = Vector2(261, 137)
+[node name="foto_win2" parent="recortes" instance=ExtResource("7_b8hvb")]
+position = Vector2(538, 429)
 
-[node name="sub_win" parent="." instance=ExtResource("9_avgrh")]
-position = Vector2(707, 133)
+[node name="foto_win" parent="recortes" instance=ExtResource("8_fbrjv")]
+position = Vector2(144, 402)
 
-[node name="texto2_win" parent="." instance=ExtResource("10_7vyje")]
-position = Vector2(785, 658)
+[node name="sub_win" parent="recortes" instance=ExtResource("9_avgrh")]
+position = Vector2(685, 182)
 
-[node name="texto_win" parent="." instance=ExtResource("11_730r7")]
-position = Vector2(318, 465)
+[node name="texto2_win" parent="recortes" instance=ExtResource("10_7vyje")]
+position = Vector2(718, 761)
 
-[node name="titular_win" parent="." instance=ExtResource("12_188xt")]
+[node name="texto_win" parent="recortes" instance=ExtResource("11_730r7")]
+position = Vector2(280, 591)
+
+[node name="titular_win" parent="recortes" instance=ExtResource("12_188xt")]
 position = Vector2(734, 405)
+
+[node name="foto_fake2" parent="recortes" instance=ExtResource("12_nhlyf")]
+position = Vector2(470, 437)
+
+[node name="foto_fake" parent="recortes" instance=ExtResource("13_qsnv5")]
+position = Vector2(470, 437)
+
+[node name="sub_fake" parent="recortes" instance=ExtResource("14_dpykp")]
+position = Vector2(470, 437)
+
+[node name="texto_fake" parent="recortes" instance=ExtResource("15_o0qnh")]
+position = Vector2(470, 437)
+
+[node name="texto_fake2" parent="recortes" instance=ExtResource("16_1qgoc")]
+position = Vector2(470, 437)
+
+[node name="titular_fake" parent="recortes" instance=ExtResource("17_gd3pl")]
+position = Vector2(470, 437)
 
 [node name="HUD" parent="." instance=ExtResource("2_hhv7i")]
 

@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://mb5in1pscp1n"]
+[gd_scene load_steps=4 format=3 uid="uid://mb5in1pscp1n"]
 
+[ext_resource type="Script" path="res://escenas/niveles/notas/recortes/scripes/foto_fake.gd" id="1_8ef10"]
 [ext_resource type="Texture2D" uid="uid://dnf5vt4sbg5th" path="res://escenas/assets/Mini game diarios/Notas/Mi cucha/Recortes/Recortes  Fail/Foto2_fake.png" id="2_508ax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnnkk"]
 size = Vector2(195, 194)
 
 [node name="foto_fake" type="Node2D"]
+script = ExtResource("1_8ef10")
 
 [node name="ArchivosDiarioRecortesDrag" type="Sprite2D" parent="."]
 position = Vector2(-2, 0)

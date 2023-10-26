@@ -21,6 +21,10 @@ var offset:Vector2
 var paper_stack = []
 var paper 
 
+func _process(_delta):
+	update_drop_count()
+	check_victory()
+
 #si esta selected cambia la ubicacion del objeto con la del mouse
 func drag(delta):
 	if selected:
@@ -88,9 +92,7 @@ func ganaste():
 		get_tree().change_scene_to_file("res://escenas/niveles/ganaste.tscn")
 
 
-func _process(_delta):
-	update_drop_count()
-	check_victory()
+
 
 func update_drop_count():
 	cant_correcta = 0

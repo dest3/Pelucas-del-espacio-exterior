@@ -5,7 +5,6 @@
 [ext_resource type="FontFile" uid="uid://dv47uia6c1wpo" path="res://escenas/assets/fonts/DS-DIGI.TTF" id="3_eney2"]
 
 [node name="Timer" type="Timer"]
-wait_time = 120.0
 one_shot = true
 autostart = true
 script = ExtResource("1_v6dp3")
