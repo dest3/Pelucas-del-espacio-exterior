@@ -4,9 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cn21a2a0bblf8" path="res://escenas/assets/Mini game diarios/Reloj.png" id="2_83is3"]
 [ext_resource type="FontFile" uid="uid://dv47uia6c1wpo" path="res://escenas/assets/fonts/DS-DIGI.TTF" id="3_eney2"]
 
-[node name="Timer" type="Timer"]
-one_shot = true
-autostart = true
+[node name="Node2D" type="Node2D"]
 script = ExtResource("1_v6dp3")
 
 [node name="Reloj" type="Sprite2D" parent="."]
@@ -18,9 +16,12 @@ offset_left = 76.0
 offset_top = 86.0
 offset_right = 185.0
 offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_eney2")
+theme_override_font_sizes/font_size = 43
+text = "60:59"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[connection signal="timeout" from="." to="." method="_on_timeout"]
