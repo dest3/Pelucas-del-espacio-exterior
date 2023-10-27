@@ -1,19 +1,33 @@
 extends Area2D
 
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+	
+func _process(delta):
 	position = get_global_mouse_position()
 
+	var count = len(get_overlapping_bodies())
+	if (count == 0):
+		pass
+	elif (count == 1):
+		get_overlapping_bodies()[0]
+		if (Input.is_action_just_pressed("mouse_click")):
+			get_parent().push_paper_to_top(get_overlapping_bodies()[0])
+
+	else:
+		var max_index = -1
+		var top_paper = null
+		for b in get_overlapping_bodies():
+			if (b.z_index > max_index):
+				max_index = b.z_index
+				top_paper = b
+		
+		top_paper.chosen()
+		for b in get_overlapping_bodies():
+			if b != top_paper:
+				b.chosen = false
+		if (Input.is_action_just_pressed("mouse_click")):
+			get_parent().push_paper_to_top(top_paper)
 
 
-
-#aca abajo detecto la colision y guardo como referencia el area con la que colisiona 
-func _on_area_entered(area):
-	pass

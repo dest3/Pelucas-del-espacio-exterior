@@ -18,8 +18,6 @@ var drops = []
 var cant_correcta = 0
 var offset:Vector2 
 
-var paper_stack = []
-var paper 
 
 func _process(_delta):
 	update_drop_count()
@@ -103,16 +101,3 @@ func check_victory():
 		ganaste()
 
 
-func add_paper(paper):
-	paper_stack.append(paper)
-	
-	var count = 0
-	for p in paper_stack:
-		p.z_index = count
-		
-		count += 1
-
-
-func push_paper_to_top(paper):
-	paper_stack.erase(paper)
-	add_paper(paper.nombre)
