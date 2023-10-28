@@ -21,9 +21,9 @@ global_var="*res://escenas/scripts/global_var.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/mode=2
+window/size/mode=3
+window/stretch/mode="viewport"
+window/stretch/scale=0.6
 
 [dotnet]
 
