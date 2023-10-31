@@ -2,7 +2,13 @@ extends Node2D
 
 var paper_stack = []
 
+func _ready():
+	paper_stack = get_tree().get_nodes_in_group("recortes")
+	
+
 func add_paper(paper):
+	
+	
 	paper_stack.append(paper)
 	
 	var count = 0

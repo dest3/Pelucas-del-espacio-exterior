@@ -22,6 +22,7 @@ var offset:Vector2
 func _process(_delta):
 	update_drop_count()
 	check_victory()
+	
 
 #si esta selected cambia la ubicacion del objeto con la del mouse
 func drag(delta):
@@ -32,8 +33,6 @@ func drag(delta):
 			#global_position = lerp(global_position, rest_point, 10 * delta) #hace que la posicion del objeto sea el ultimo rest point
 			rotation = lerp_angle(rotation, 0, 10 * delta)#vuelve al angulo por defecto del objeto al soltarlo
 
-#obtiene todos los puntos de anclaje iniciales y setea como origen
-
 #si hace click
 func up_click_izq(event):
 	if event is InputEventMouseButton: #captura todos los eventos y comprueba si se levanta el click
@@ -42,7 +41,6 @@ func up_click_izq(event):
 			selected= false
 			emit_signal("drag_ended", event.position)
 			#last_rest()
-			
 
 #si suelta el click
 func down_click_izq(event):
@@ -51,6 +49,8 @@ func down_click_izq(event):
 		emit_signal("drag_started",event.position)
 		global_var.is_draging = true
 		offset =  get_global_mouse_position() - global_position
+		
+
 
 #obtiene los puntos de anclaje al principio del nivel.
 func get_rest_point():
@@ -89,9 +89,6 @@ func get_drop():
 func ganaste():
 		get_tree().change_scene_to_file("res://escenas/niveles/ganaste.tscn")
 
-
-
-
 func update_drop_count():
 	cant_correcta = 0
 	get_drop()
@@ -99,5 +96,4 @@ func update_drop_count():
 func check_victory():
 	if cant_correcta >= 6:
 		ganaste()
-
 

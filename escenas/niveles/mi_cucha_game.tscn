@@ -85,3 +85,4 @@ position = Vector2(470, 437)
 [node name="HUD" parent="." instance=ExtResource("2_hhv7i")]
 
 [node name="Timer" parent="." instance=ExtResource("13_2utmd")]
+time = 60
