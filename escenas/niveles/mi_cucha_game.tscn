@@ -1,11 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=21 format=3 uid="uid://77hjvakgytos"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_1humk"]
 [ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="2_hhv7i"]
 [ext_resource type="Texture2D" uid="uid://cnrjlkago6job" path="res://escenas/assets/HUD/Juego gameplay Hud.png" id="3_3m4sr"]
 [ext_resource type="PackedScene" uid="uid://dsclclrq2wjbu" path="res://escenas/entidades/origen.tscn" id="4_iv8s4"]
 [ext_resource type="Texture2D" uid="uid://bufnk48l5j330" path="res://escenas/assets/Mini game diarios/Fondo gameplay 1.png" id="6_vomnt"]
-[ext_resource type="Script" path="res://escenas/niveles/recortes.gd" id="6_y7jce"]
 [ext_resource type="PackedScene" uid="uid://vobwm544qr51" path="res://escenas/niveles/notas/recortes/win/foto_win2.tscn" id="7_b8hvb"]
 [ext_resource type="PackedScene" uid="uid://khicl5c0p0us" path="res://escenas/niveles/notas/micuchatemplate.tscn" id="7_ee4vg"]
 [ext_resource type="PackedScene" uid="uid://cy1xpffernohi" path="res://escenas/niveles/notas/recortes/win/foto_win.tscn" id="8_fbrjv"]
@@ -42,7 +41,6 @@ texture = ExtResource("6_vomnt")
 position = Vector2(1355, 477)
 
 [node name="recortes" type="Node2D" parent="."]
-script = ExtResource("6_y7jce")
 
 [node name="foto_win2" parent="recortes" instance=ExtResource("7_b8hvb")]
 position = Vector2(538, 429)

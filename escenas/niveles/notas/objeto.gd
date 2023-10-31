@@ -42,7 +42,6 @@ func up_click_izq(event):
 			selected= false
 			emit_signal("drag_ended", event.position)
 			#last_rest()
-			
 
 #si suelta el click
 func down_click_izq(event):
@@ -89,9 +88,6 @@ func get_drop():
 func ganaste():
 		get_tree().change_scene_to_file("res://escenas/niveles/ganaste.tscn")
 
-
-
-
 func update_drop_count():
 	cant_correcta = 0
 	get_drop()
@@ -101,3 +97,17 @@ func check_victory():
 		ganaste()
 
 
+var paper_stack = []
+
+func add_paper(paper):
+	paper_stack.append(paper)
+	
+	var count = 0
+	for p in paper_stack:
+		p.z_index = count
+		
+		count += 1
+
+func push_paper_to_top(paper):
+	paper_stack.erase(paper)
+	add_paper(paper)
