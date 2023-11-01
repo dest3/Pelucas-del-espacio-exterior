@@ -88,6 +88,7 @@ func get_drop():
 	
 func ganaste():
 		get_tree().change_scene_to_file("res://escenas/niveles/ganaste.tscn")
+		global_var.mi_cucha_win = true
 
 func update_drop_count():
 	cant_correcta = 0

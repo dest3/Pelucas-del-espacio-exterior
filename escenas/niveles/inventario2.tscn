@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmjfj7na2y32u"]
+
+[ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_b61q2"]
+[ext_resource type="Texture2D" uid="uid://7b83j81lnlat" path="res://escenas/assets/Pop Ups/Pop Up fondo.png" id="2_ibom3"]
+[ext_resource type="Texture2D" uid="uid://ckf7oc5jeqe8" path="res://escenas/assets/Pop Ups/Pop Up.png" id="3_0q7io"]
+[ext_resource type="Texture2D" uid="uid://c1mynkupxo5hy" path="res://escenas/assets/Pop Ups/Copia de Salir.png" id="5_8whbc"]
+[ext_resource type="Texture2D" uid="uid://w1d6p4ifrb8u" path="res://escenas/assets/Mini game diarios/Notas/Crypto Bros/Cryptobros WIN.png" id="5_v1hah"]
+
+[node name="inventario" type="Node2D"]
+script = ExtResource("1_b61q2")
+
+[node name="PopUpFondo" type="Sprite2D" parent="."]
+position = Vector2(961, 543)
+texture = ExtResource("2_ibom3")
+
+[node name="PopUp" type="Sprite2D" parent="."]
+position = Vector2(923, 533)
+scale = Vector2(1.1953, 1.21598)
+texture = ExtResource("3_0q7io")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1776.0
+offset_top = -494.0
+offset_right = 2670.0
+offset_bottom = 205.0
+rotation = 0.670206
+texture_normal = ExtResource("5_8whbc")
+
+[node name="CryptobrosWin" type="Sprite2D" parent="."]
+position = Vector2(949, 544)
+scale = Vector2(0.441, 0.441)
+texture = ExtResource("5_v1hah")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_salir_inventario_pressed"]

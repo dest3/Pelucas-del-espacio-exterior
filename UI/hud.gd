@@ -1,10 +1,9 @@
 extends CanvasLayer
 
 
-
-
 func _on_carpeta_azul_pressed():
-	get_tree().change_scene_to_file("res://escenas/niveles/inventario.tscn")
+	if global_var.mi_cucha_win == true:
+		get_tree().change_scene_to_file("res://escenas/niveles/inventario.tscn")
 
 
 func _on_maquina_de_escribir_pressed():

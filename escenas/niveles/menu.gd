@@ -66,4 +66,4 @@ func _on_volver_perder_pressed():
 	get_tree().change_scene_to_file("res://escenas/niveles/menu.tscn")
 
 func _on_volver_ganar_pressed():
-	get_tree().change_scene_to_file("res://escenas/niveles/menu.tscn")
+	get_tree().change_scene_to_file("res://escenas/niveles/taller.tscn")

@@ -1,17 +1,60 @@
-[gd_scene load_steps=10 format=3 uid="uid://bp3c2tkeiiouq"]
+[gd_scene load_steps=14 format=3 uid="uid://bp3c2tkeiiouq"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_2puqo"]
+[ext_resource type="Texture2D" uid="uid://djgaa5itogrb3" path="res://escenas/assets/Menu/Fondo menu.png" id="2_fs2wg"]
 [ext_resource type="Texture2D" uid="uid://pwbr8o7fa8xc" path="res://escenas/assets/Menu/Jugar.png" id="2_fyyyq"]
 [ext_resource type="Texture2D" uid="uid://dksuoyvqjntgt" path="res://escenas/assets/Menu/Salir.png" id="3_b44mj"]
 [ext_resource type="Texture2D" uid="uid://rrjcfp80bgms" path="res://escenas/assets/Menu/Falcon.png" id="4_canof"]
 [ext_resource type="Texture2D" uid="uid://3j2xn6akm03o" path="res://escenas/assets/Menu/Creditos.png" id="4_sue3u"]
-[ext_resource type="Texture2D" uid="uid://0c8g7c4j2a13" path="res://escenas/assets/Menu/MENU - plantilla.png" id="5_8te85"]
 [ext_resource type="Texture2D" uid="uid://c08a8pt0jhjp6" path="res://escenas/assets/Menu/titulo.png" id="7_bdk4f"]
 [ext_resource type="Texture2D" uid="uid://c6boeu61unk0j" path="res://escenas/assets/Menu/Crunch.png" id="8_i6hhn"]
 [ext_resource type="AudioStream" uid="uid://4detfemwqbfj" path="res://escenas/assets/sonidos/Main SONG.wav" id="9_snpwj"]
+[ext_resource type="Texture2D" uid="uid://c3m8uhsfxs4da" path="res://escenas/assets/Menu/peluca.png" id="10_jyp42"]
+
+[sub_resource type="Animation" id="Animation_m05t1"]
+resource_name = "peluca"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.4, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1530, 736), Vector2(1530, 720), Vector2(1530, 706), Vector2(1530, 717)]
+}
+
+[sub_resource type="Animation" id="Animation_505dl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1530, 736)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cyh1s"]
+_data = {
+"RESET": SubResource("Animation_505dl"),
+"peluca": SubResource("Animation_m05t1")
+}
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_2puqo")
+
+[node name="FondoMenu" type="Sprite2D" parent="."]
+position = Vector2(959, 544)
+texture = ExtResource("2_fs2wg")
 
 [node name="play" type="Button" parent="."]
 offset_left = 560.0
@@ -79,11 +122,6 @@ region_rect = Rect2(937.184, 258.843, 404.624, 251.593)
 position = Vector2(961, 536)
 texture = ExtResource("4_canof")
 
-[node name="Menu-Plantilla" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(959, 542)
-texture = ExtResource("5_8te85")
-
 [node name="Titulo" type="Sprite2D" parent="."]
 position = Vector2(597, 215)
 texture = ExtResource("7_bdk4f")
@@ -94,6 +132,16 @@ region_rect = Rect2(0, 0, 1198.91, 433.641)
 stream = ExtResource("9_snpwj")
 volume_db = -6.933
 autoplay = true
+
+[node name="Peluca" type="Sprite2D" parent="."]
+position = Vector2(1530, 736)
+texture = ExtResource("10_jyp42")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Peluca"]
+autoplay = "peluca"
+libraries = {
+"": SubResource("AnimationLibrary_cyh1s")
+}
 
 [connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
 [connection signal="mouse_exited" from="play" to="." method="_on_play_mouse_exited"]
