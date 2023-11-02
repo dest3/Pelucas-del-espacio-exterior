@@ -1,4 +1,4 @@
-extends Node2D
+extends recortes
 class_name Documento
 
 #señales para los eventos
@@ -22,7 +22,7 @@ var offset:Vector2
 func _process(_delta):
 	update_drop_count()
 	check_victory()
-	
+
 
 #si esta selected cambia la ubicacion del objeto con la del mouse
 func drag(delta):
@@ -40,7 +40,7 @@ func up_click_izq(event):
 			global_var.is_draging = false
 			selected= false
 			emit_signal("drag_ended", event.position)
-			#last_rest()
+			
 
 #si suelta el click
 func down_click_izq(event):
@@ -49,7 +49,7 @@ func down_click_izq(event):
 		emit_signal("drag_started",event.position)
 		global_var.is_draging = true
 		offset =  get_global_mouse_position() - global_position
-		
+		push_paper_to_top(self)
 
 
 #obtiene los puntos de anclaje al principio del nivel.
@@ -62,6 +62,8 @@ func get_rest_point():
 func _on_area_2d_mouse_entered():
 	scale = Vector2(1.05, 1.05)
 	mouse_over = true
+
+
 #mouse over'nt (?
 func _on_area_2d_mouse_exited():
 		scale = Vector2(1.0, 1.0)
@@ -78,7 +80,8 @@ func _on_area_2d_body_entered(body: StaticBody2D):
 		selected=false
 		# Cambiar la posición del objeto para que coincida con la del cuerpo
 		global_position = body.global_position
-		body_ref.fill = true
+		
+		
 
 func get_drop():
 	drops = get_tree().get_nodes_in_group("respuesta")
@@ -87,8 +90,9 @@ func get_drop():
 			cant_correcta = cant_correcta +1
 	
 func ganaste():
-		get_tree().change_scene_to_file("res://escenas/niveles/ganaste.tscn")
-		global_var.mi_cucha_win = true
+		#aca se tiene que controlar que nota esta haciendo cuando complete una se tiene que llevar a la carpeta de inventario
+		get_tree().change_scene_to_file("res://escenas/niveles/ganaste.tscn")#esto ya no serviria
+		global_var.mi_cucha_win = true#cada vez que complete una nota se tiene que actualizar la variable global para habilitar las notas completas en el inventario
 
 func update_drop_count():
 	cant_correcta = 0

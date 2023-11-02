@@ -1,10 +1,15 @@
 extends Node2D
+class_name recortes
 
 var paper_stack = []
 
+#obtiene todos los nodos hijos del nodo "recortes"
 func _ready():
-	paper_stack = get_tree().get_nodes_in_group("recortes")
+	paper_stack = get_children()
 	
+func _process(delta):
+	if Input.is_action_just_pressed("test"):
+		print(paper_stack)
 
 func add_paper(paper):
 	
