@@ -1,19 +1,22 @@
 extends Node2D
-class_name recortes
+class_name stack
+
 
 var paper_stack = []
+var childrens
 
-#obtiene todos los nodos hijos del nodo "recortes"
-func _ready():
-	paper_stack = get_children()
-	
+#esta funcion imprime por consola todos los nodos de children al apretar espacio
 func _process(delta):
-	if Input.is_action_just_pressed("test"):
-		print(paper_stack)
+	test()
 
+# cuando el nodo esta listo obtiene todos sus nodos hijos y agrega estos a paper stak 
+func _ready():
+	childrens = get_children(false)
+	for child in childrens:
+		add_paper(child)
+
+# esta funcion recorre todos los nodos en papar_stak y les asigna un z index segun su posicion en el array 
 func add_paper(paper):
-	
-	
 	paper_stack.append(paper)
 	
 	var count = 0
@@ -22,6 +25,14 @@ func add_paper(paper):
 		
 		count += 1
 
+#esta funcion borra del stack el nodo seleccionado y lo vuelve a agregar para dejarlo en la pos 0 
 func push_paper_to_top(paper):
 	paper_stack.erase(paper)
 	add_paper(paper)
+
+
+
+func test():
+	if Input.is_action_pressed("test"):
+		print(childrens)
+		print(paper_stack)

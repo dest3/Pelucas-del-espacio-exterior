@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 global_var="*res://escenas/scripts/global_var.gd"
 
+[debug]
+
+settings/gdscript/max_call_stack=2047
+
 [display]
 
 window/stretch/mode="viewport"

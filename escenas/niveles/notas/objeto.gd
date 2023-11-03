@@ -1,4 +1,4 @@
-extends recortes
+extends stack
 class_name Documento
 
 #señales para los eventos
@@ -49,7 +49,7 @@ func down_click_izq(event):
 		emit_signal("drag_started",event.position)
 		global_var.is_draging = true
 		offset =  get_global_mouse_position() - global_position
-		push_paper_to_top(self)
+		#push_paper_to_top(self)
 
 
 #obtiene los puntos de anclaje al principio del nivel.
