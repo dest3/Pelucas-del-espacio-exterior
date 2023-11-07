@@ -6,7 +6,7 @@ var paper_stack = []
 var childrens
 
 #esta funcion imprime por consola todos los nodos de children al apretar espacio
-func _process(delta):
+func _process(_delta):
 	test()
 
 # cuando el nodo esta listo obtiene todos sus nodos hijos y agrega estos a paper stak 

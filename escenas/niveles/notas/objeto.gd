@@ -46,10 +46,12 @@ func up_click_izq(event):
 func down_click_izq(event):
 	if Input.is_action_just_pressed("click") and mouse_over:
 		selected = true
+		add_paper(self)
+		push_paper_to_top(self)
 		emit_signal("drag_started",event.position)
 		global_var.is_draging = true
 		offset =  get_global_mouse_position() - global_position
-		#push_paper_to_top(self)
+		
 
 
 #obtiene los puntos de anclaje al principio del nivel.
