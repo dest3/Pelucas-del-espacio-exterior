@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5k1dswcx7r58"]
+
+[ext_resource type="Texture2D" uid="uid://belxbik1g3wy1" path="res://escenas/assets/Mini game diarios/Notas/Crypto Bros/Cryptobros fake.png" id="1_tmkty"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_tmkty")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://co8aw6qrn8g2n"]
+
+[ext_resource type="Texture2D" uid="uid://cp1m530psumxp" path="res://escenas/assets/Mini game diarios/Notas/Mi cucha/Mi cucha TEMPLATE.png" id="1_xlrwv"]
+[ext_resource type="PackedScene" uid="uid://boo0c0cmmj1yg" path="res://escenas/entidades/drop.tscn" id="2_26o8d"]
+
+[node name="CryptoBros Template" type="Sprite2D"]
+texture = ExtResource("1_xlrwv")
+
+[node name="drop" parent="." instance=ExtResource("2_26o8d")]
+position = Vector2(244.898, -142.857)
+respuesta = "foto2_win2"
+
+[node name="drop2" parent="." instance=ExtResource("2_26o8d")]
+position = Vector2(-463, -338)
+respuesta = "foto_win_2"
+
+[node name="drop3" parent="." instance=ExtResource("2_26o8d")]
+position = Vector2(-487.528, 439.909)
+respuesta = "texto_win 2"
+
+[node name="drop4" parent="." instance=ExtResource("2_26o8d")]
+position = Vector2(226.757, 623.583)
+respuesta = "texto2_win 2"
+
+[node name="drop5" parent="." instance=ExtResource("2_26o8d")]
+position = Vector2(-18.1406, -748.299)
+respuesta = "titular_win 2"
+
+[node name="drop6" parent="." instance=ExtResource("2_26o8d")]
+position = Vector2(-11.3379, -594.104)
+respuesta = "sub_win_2"

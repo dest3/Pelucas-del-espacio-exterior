@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4vduinkvq5kh"]
+
+[ext_resource type="Texture2D" uid="uid://w1d6p4ifrb8u" path="res://escenas/assets/Mini game diarios/Notas/Crypto Bros/Cryptobros WIN.png" id="1_k426x"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_k426x")
