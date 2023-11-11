@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://ktlxxwmgkb56"]
+
+[ext_resource type="PackedScene" uid="uid://vobwm544qr51" path="res://escenas/niveles/notas/recortes/win/foto_win2.tscn" id="1_cik4r"]
+[ext_resource type="PackedScene" uid="uid://cy1xpffernohi" path="res://escenas/niveles/notas/recortes/win/foto_win.tscn" id="2_om04s"]
+[ext_resource type="PackedScene" uid="uid://duy8divy5wmjf" path="res://escenas/niveles/notas/recortes/win/texto_win.tscn" id="3_gmyyf"]
+[ext_resource type="PackedScene" uid="uid://dsclclrq2wjbu" path="res://escenas/entidades/origen.tscn" id="4_yxhae"]
+
+[node name="test" type="Node2D"]
+
+[node name="foto_win2" parent="." instance=ExtResource("1_cik4r")]
+position = Vector2(525, 263)
+
+[node name="foto_win" parent="." instance=ExtResource("2_om04s")]
+position = Vector2(288, 196)
+
+[node name="texto_win" parent="." instance=ExtResource("3_gmyyf")]
+position = Vector2(60, 175)
+
+[node name="drop_zone" parent="." instance=ExtResource("4_yxhae")]

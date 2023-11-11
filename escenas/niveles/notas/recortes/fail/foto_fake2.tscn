@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://xtph1180eab3"]
 
-[ext_resource type="Script" path="res://escenas/niveles/notas/recortes/scripes/foto_fake2.gd" id="1_31yu8"]
+[ext_resource type="Script" path="res://escenas/niveles/notas/recortes/scripes/recorte.gd" id="1_31yu8"]
 [ext_resource type="Texture2D" uid="uid://d1cgv4bsvr0us" path="res://escenas/assets/Mini game diarios/Notas/Mi cucha/Recortes/Recortes  Fail/Foto_fake.png" id="2_107dp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnnkk"]

@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://duy8divy5wmjf"]
 
-[ext_resource type="Script" path="res://escenas/niveles/notas/recortes/scripes/texto_win.gd" id="1_t3b45"]
+[ext_resource type="Script" path="res://escenas/niveles/notas/recortes/scripes/recorte.gd" id="1_mm1oa"]
 [ext_resource type="Texture2D" uid="uid://dn5tpap71mrf7" path="res://escenas/assets/Mini game diarios/Notas/Mi cucha/Recortes/Recortes Win/Texto_win.png" id="2_blpxj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnnkk"]
 size = Vector2(195, 379)
 
 [node name="texto_win" type="Node2D" groups=["recortes"]]
-script = ExtResource("1_t3b45")
+script = ExtResource("1_mm1oa")
 
 [node name="ArchivosDiarioRecortesDrag" type="Sprite2D" parent="."]
 position = Vector2(-2, 0)

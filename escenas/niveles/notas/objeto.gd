@@ -7,7 +7,6 @@ signal drag_ended
 
 
 #defino variables 
-var nombre = ""
 var selected = false #si esta seleccionado o no
 var rest_point 
 var rest_nodes= []
@@ -18,10 +17,6 @@ var drops = []
 var cant_correcta = 0
 var offset:Vector2 
 
-
-func _process(_delta):
-	update_drop_count()
-	check_victory()
 
 
 #si esta selected cambia la ubicacion del objeto con la del mouse
@@ -40,6 +35,7 @@ func up_click_izq(event):
 			global_var.is_draging = false
 			selected= false
 			emit_signal("drag_ended", event.position)
+			
 			
 
 #si suelta el click
@@ -71,36 +67,4 @@ func _on_area_2d_mouse_exited():
 		scale = Vector2(1.0, 1.0)
 		mouse_over = false
 
-#aca compruebo si es correcta la ubicacion y acomodo en patalla
-func _on_area_2d_body_entered(body: StaticBody2D):
-	print("colision")
-	if body.is_in_group("respuesta") and body.respuesta == nombre:
-		# El cuerpo es correcto
-		body_ref = body
-		is_inside_dropable = true
-		print(nombre)
-		selected=false
-		# Cambiar la posición del objeto para que coincida con la del cuerpo
-		global_position = body.global_position
-		
-		
-
-func get_drop():
-	drops = get_tree().get_nodes_in_group("respuesta")
-	for item in drops:
-		if item.fill == true:
-			cant_correcta = cant_correcta +1
-	
-func ganaste():
-		#aca se tiene que controlar que nota esta haciendo cuando complete una se tiene que llevar a la carpeta de inventario
-		get_tree().change_scene_to_file("res://escenas/niveles/ganaste.tscn")#esto ya no serviria
-		global_var.mi_cucha_win = true#cada vez que complete una nota se tiene que actualizar la variable global para habilitar las notas completas en el inventario
-
-func update_drop_count():
-	cant_correcta = 0
-	get_drop()
-
-func check_victory():
-	if cant_correcta >= 6:
-		ganaste()
 

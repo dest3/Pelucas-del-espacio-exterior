@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=21 format=3 uid="uid://77hjvakgytos"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_1humk"]
 [ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="2_hhv7i"]
@@ -20,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://ds144iyw4ectl" path="res://escenas/niveles/notas/recortes/fail/texto_fake2.tscn" id="15_o0qnh"]
 [ext_resource type="PackedScene" uid="uid://ddfkjak7818om" path="res://escenas/niveles/notas/recortes/fail/texto_fake.tscn" id="16_1qgoc"]
 [ext_resource type="PackedScene" uid="uid://djve5msw3lj1a" path="res://escenas/niveles/notas/recortes/fail/titular_fake.tscn" id="17_gd3pl"]
-[ext_resource type="PackedScene" uid="uid://c3ik5ohnbuatc" path="res://escenas/entidades/papper_getter.tscn" id="21_fx8lq"]
 
 [node name="mi_cucha_game" type="Node2D"]
 script = ExtResource("1_1humk")
@@ -41,8 +40,6 @@ texture = ExtResource("6_vomnt")
 [node name="MiCuchaTemplate" parent="." instance=ExtResource("7_ee4vg")]
 position = Vector2(1355, 477)
 
-[node name="HUD" parent="." instance=ExtResource("2_hhv7i")]
-
 [node name="Timer" parent="." instance=ExtResource("13_2utmd")]
 time = 60
 
@@ -51,38 +48,45 @@ position = Vector2(538, 429)
 script = ExtResource("6_y7jce")
 
 [node name="foto_win2" parent="recortes" instance=ExtResource("7_b8hvb")]
+position = Vector2(52, -67)
+nombre = "foto_win2"
 
 [node name="foto_win" parent="recortes" instance=ExtResource("8_fbrjv")]
-position = Vector2(-394, -27)
+position = Vector2(-342, -94)
+nombre = "foto_win"
 
 [node name="sub_win" parent="recortes" instance=ExtResource("9_avgrh")]
-position = Vector2(147, -247)
+position = Vector2(199, -314)
+nombre = "sub_win"
 
 [node name="texto2_win" parent="recortes" instance=ExtResource("10_7vyje")]
-position = Vector2(180, 332)
+position = Vector2(232, 265)
+nombre = "texto2_win"
 
 [node name="texto_win" parent="recortes" instance=ExtResource("11_730r7")]
-position = Vector2(-258, 162)
+position = Vector2(-206, 95)
+nombre = "texto_win"
 
 [node name="titular_win" parent="recortes" instance=ExtResource("12_188xt")]
-position = Vector2(196, -24)
+position = Vector2(248, -91)
+nombre = "titular_win"
 
 [node name="foto_fake2" parent="recortes" instance=ExtResource("12_nhlyf")]
-position = Vector2(-68, 8)
+position = Vector2(-16, -59)
 
 [node name="foto_fake" parent="recortes" instance=ExtResource("13_qsnv5")]
-position = Vector2(-68, 8)
+position = Vector2(-16, -59)
 
 [node name="sub_fake" parent="recortes" instance=ExtResource("14_dpykp")]
-position = Vector2(-68, 8)
+position = Vector2(-16, -59)
 
 [node name="texto_fake" parent="recortes" instance=ExtResource("15_o0qnh")]
-position = Vector2(-68, 8)
+position = Vector2(-16, -59)
 
 [node name="texto_fake2" parent="recortes" instance=ExtResource("16_1qgoc")]
-position = Vector2(-68, 8)
+position = Vector2(-16, -59)
 
 [node name="titular_fake" parent="recortes" instance=ExtResource("17_gd3pl")]
-position = Vector2(-68, 8)
+position = Vector2(-16, -59)
 
-[node name="Area2D" parent="." instance=ExtResource("21_fx8lq")]
+[node name="HUD" parent="." instance=ExtResource("2_hhv7i")]
