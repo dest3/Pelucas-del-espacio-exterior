@@ -17,7 +17,7 @@ func _ready():
 
 # esta funcion recorre todos los nodos en papar_stak y les asigna un z index segun su posicion en el array 
 func add_paper(paper):
-	paper_stack.append(paper)
+	paper_stack.push_back(paper)
 	
 	var count = 0
 	for p in paper_stack:

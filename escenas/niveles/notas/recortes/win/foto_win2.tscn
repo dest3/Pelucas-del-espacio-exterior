@@ -9,11 +9,12 @@ size = Vector2(382, 377)
 [node name="foto_win2" type="Node2D" groups=["recortes"]]
 script = ExtResource("1_uqthq")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="panel" type="Panel" parent="."]
 offset_left = -195.0
 offset_top = -191.0
 offset_right = 187.0
 offset_bottom = 186.0
+mouse_force_pass_scroll_events = false
 
 [node name="ArchivosDiarioRecortesDrag" type="Sprite2D" parent="."]
 position = Vector2(-6.35969, -4.228)

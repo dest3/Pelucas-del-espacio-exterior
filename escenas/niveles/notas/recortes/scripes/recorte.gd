@@ -3,12 +3,24 @@ extends Documento
 @export var nombre = ""
 
 
-func _ready():
-	get_rest_point()
+func add_paper(paper):
+	get_parent().paper_stack.push_back(paper)
 	
+	var count = 0
+	for p in get_parent().paper_stack:
+		p.z_index = count
+		
+		count += 1
+
+func push_paper_to_top(paper):
+	get_parent().paper_stack.erase(paper)
+	add_paper(paper)
+
 
 func _process(_delta):
 	get_drop()
+	if(name == "titular_fake"):
+		print(z_index)
 
 #cuando se le hace click al objeto, selected se pone verdadero
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
