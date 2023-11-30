@@ -16,10 +16,10 @@ func area_exited(area):
 	recortes.erase(recorte)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	global_position = get_global_mouse_position()
 	if Input.is_action_just_pressed("click"):
 		recorte = null

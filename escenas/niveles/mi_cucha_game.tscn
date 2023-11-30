@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=24 format=3 uid="uid://77hjvakgytos"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_1humk"]
 [ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="2_hhv7i"]
@@ -20,6 +20,12 @@
 [ext_resource type="PackedScene" uid="uid://ds144iyw4ectl" path="res://escenas/niveles/notas/recortes/fail/texto_fake2.tscn" id="15_o0qnh"]
 [ext_resource type="PackedScene" uid="uid://ddfkjak7818om" path="res://escenas/niveles/notas/recortes/fail/texto_fake.tscn" id="16_1qgoc"]
 [ext_resource type="PackedScene" uid="uid://djve5msw3lj1a" path="res://escenas/niveles/notas/recortes/fail/titular_fake.tscn" id="17_gd3pl"]
+[ext_resource type="Script" path="res://escenas/niveles/selector.gd" id="21_8y4ka"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5hdxs"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_l8vsv"]
+size = Vector2(100, 100)
 
 [node name="mi_cucha_game" type="Node2D"]
 script = ExtResource("1_1humk")
@@ -90,3 +96,17 @@ position = Vector2(-16, -59)
 position = Vector2(-16, -59)
 
 [node name="HUD" parent="." instance=ExtResource("2_hhv7i")]
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = 1000
+script = ExtResource("21_8y4ka")
+
+[node name="Area2D" type="Area2D" parent="Node2D"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+shape = SubResource("CircleShape2D_5hdxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+visible = false
+texture = SubResource("PlaceholderTexture2D_l8vsv")

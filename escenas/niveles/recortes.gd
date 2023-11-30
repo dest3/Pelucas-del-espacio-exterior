@@ -5,15 +5,12 @@ class_name stack
 var paper_stack = []
 var childrens
 
-#esta funcion imprime por consola todos los nodos de children al apretar espacio
-func _process(_delta):
-	test()
-
 # cuando el nodo esta listo obtiene todos sus nodos hijos y agrega estos a paper stak 
 func _ready():
 	childrens = get_children(false)
 	for child in childrens:
 		add_paper(child)
+		child.fui_apretado.connect(self.push_paper_to_top)
 
 # esta funcion recorre todos los nodos en papar_stak y les asigna un z index segun su posicion en el array 
 func add_paper(paper):
@@ -32,7 +29,4 @@ func push_paper_to_top(paper):
 
 
 
-func test():
-	if Input.is_action_pressed("test"):
-		print(childrens)
-		print(paper_stack)
+
