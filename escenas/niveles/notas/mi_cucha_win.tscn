@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://bxiev4mbq8bmj"]
 
-[ext_resource type="Texture2D" uid="uid://dd0doxjnt7esm" path="res://escenas/assets/Mini game diarios/Notas/Mi cucha/Mi cucha Win.png" id="1_1tg31"]
+[ext_resource type="Texture2D" uid="uid://dd0doxjnt7esm" path="res://escenas/assets/Mini game diarios/Notas/Mi cucha/Mi cucha Win.png" id="1_kg4hj"]
 
 [node name="MiCuchaWin" type="Sprite2D"]
 scale = Vector2(0.441, 0.441)
-texture = ExtResource("1_1tg31")
+texture = ExtResource("1_kg4hj")

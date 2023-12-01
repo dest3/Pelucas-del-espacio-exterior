@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://77hjvakgytos"]
+[gd_scene load_steps=23 format=3 uid="uid://77hjvakgytos"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_1humk"]
 [ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="2_hhv7i"]
@@ -16,8 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://xtph1180eab3" path="res://escenas/niveles/notas/recortes/fail/foto_fake2.tscn" id="12_nhlyf"]
 [ext_resource type="PackedScene" uid="uid://db88nn5flj8j6" path="res://escenas/entidades/timer.tscn" id="13_2utmd"]
 [ext_resource type="PackedScene" uid="uid://mb5in1pscp1n" path="res://escenas/niveles/notas/recortes/fail/foto_fake.tscn" id="13_qsnv5"]
-[ext_resource type="PackedScene" uid="uid://7qenr3xaquud" path="res://escenas/niveles/notas/recortes/fail/sub_fake.tscn" id="14_dpykp"]
-[ext_resource type="PackedScene" uid="uid://ds144iyw4ectl" path="res://escenas/niveles/notas/recortes/fail/texto_fake2.tscn" id="15_o0qnh"]
+[ext_resource type="PackedScene" uid="uid://7qenr3xaquud" path="res://escenas/niveles/notas/recortes/fail/sub_fake.tscn" id="15_o0qnh"]
 [ext_resource type="PackedScene" uid="uid://ddfkjak7818om" path="res://escenas/niveles/notas/recortes/fail/texto_fake.tscn" id="16_1qgoc"]
 [ext_resource type="PackedScene" uid="uid://djve5msw3lj1a" path="res://escenas/niveles/notas/recortes/fail/titular_fake.tscn" id="17_gd3pl"]
 [ext_resource type="Script" path="res://escenas/niveles/selector.gd" id="21_8y4ka"]
@@ -83,7 +82,7 @@ position = Vector2(-16, -59)
 [node name="foto_fake" parent="recortes" instance=ExtResource("13_qsnv5")]
 position = Vector2(-16, -59)
 
-[node name="sub_fake" parent="recortes" instance=ExtResource("14_dpykp")]
+[node name="sub_fake" parent="recortes" instance=ExtResource("15_o0qnh")]
 position = Vector2(-16, -59)
 
 [node name="texto_fake" parent="recortes" instance=ExtResource("15_o0qnh")]

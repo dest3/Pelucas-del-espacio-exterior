@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://d1wk6b8q2jx2x"]
+
+[ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_tddh7"]
+[ext_resource type="Texture2D" uid="uid://cnrjlkago6job" path="res://escenas/assets/HUD/Juego gameplay Hud.png" id="2_t6qem"]
+[ext_resource type="PackedScene" uid="uid://dsclclrq2wjbu" path="res://escenas/entidades/origen.tscn" id="3_2vepq"]
+[ext_resource type="Texture2D" uid="uid://bufnk48l5j330" path="res://escenas/assets/Mini game diarios/Fondo gameplay 1.png" id="4_rd8m4"]
+[ext_resource type="PackedScene" uid="uid://db88nn5flj8j6" path="res://escenas/entidades/timer.tscn" id="6_naddf"]
+[ext_resource type="Script" path="res://escenas/niveles/recortes.gd" id="7_jp62m"]
+[ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="20_v7ty8"]
+[ext_resource type="Script" path="res://escenas/niveles/selector.gd" id="21_e6ksl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5hdxs"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_l8vsv"]
+size = Vector2(100, 100)
+
+[node name="mi_cucha_game" type="Node2D"]
+script = ExtResource("1_tddh7")
+
+[node name="JuegoGameplayHud" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(961, 536)
+texture = ExtResource("2_t6qem")
+
+[node name="origen" parent="." instance=ExtResource("3_2vepq")]
+position = Vector2(503, 490)
+
+[node name="FondoGameplay1" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(959, 539)
+texture = ExtResource("4_rd8m4")
+
+[node name="Timer" parent="." instance=ExtResource("6_naddf")]
+time = 60
+
+[node name="recortes" type="Node2D" parent="."]
+position = Vector2(538, 429)
+script = ExtResource("7_jp62m")
+
+[node name="HUD" parent="." instance=ExtResource("20_v7ty8")]
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = 1000
+script = ExtResource("21_e6ksl")
+
+[node name="Area2D" type="Area2D" parent="Node2D"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+shape = SubResource("CircleShape2D_5hdxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+visible = false
+texture = SubResource("PlaceholderTexture2D_l8vsv")
