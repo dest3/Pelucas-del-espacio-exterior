@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dluxcvwol3hqx"]
+
+[ext_resource type="Script" path="res://escenas/niveles/notas/recortes/scripes/recorte.gd" id="1_8mk0w"]
+[ext_resource type="Texture2D" uid="uid://qahealqih8dp" path="res://escenas/assets/Mini game diarios/Notas/Crypto Bros/Recortes/Recortes WIN/Sub_win 2.png" id="2_kc4eu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnnkk"]
+size = Vector2(471, 31)
+
+[node name="sub_win" type="Node2D" groups=["recortes"]]
+script = ExtResource("1_8mk0w")
+
+[node name="SubWin2" type="Sprite2D" parent="."]
+scale = Vector2(0.441, 0.441)
+texture = ExtResource("2_kc4eu")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5.5, 3.5)
+shape = SubResource("RectangleShape2D_fnnkk")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

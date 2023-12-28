@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d1wk6b8q2jx2x"]
+[gd_scene load_steps=18 format=3 uid="uid://d1wk6b8q2jx2x"]
 
 [ext_resource type="Script" path="res://escenas/niveles/menu.gd" id="1_tddh7"]
 [ext_resource type="Texture2D" uid="uid://cnrjlkago6job" path="res://escenas/assets/HUD/Juego gameplay Hud.png" id="2_t6qem"]
@@ -6,6 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://bufnk48l5j330" path="res://escenas/assets/Mini game diarios/Fondo gameplay 1.png" id="4_rd8m4"]
 [ext_resource type="PackedScene" uid="uid://db88nn5flj8j6" path="res://escenas/entidades/timer.tscn" id="6_naddf"]
 [ext_resource type="Script" path="res://escenas/niveles/recortes.gd" id="7_jp62m"]
+[ext_resource type="PackedScene" uid="uid://lopmf20qpiaq" path="res://escenas/niveles/notas/cripto bros/win/foto_win1_cripto.tscn" id="8_risqx"]
+[ext_resource type="PackedScene" uid="uid://5xer12eapwv2" path="res://escenas/niveles/notas/criptobros_template.tscn" id="9_i0cqq"]
+[ext_resource type="PackedScene" uid="uid://dluxcvwol3hqx" path="res://escenas/niveles/notas/cripto bros/win/sub_win_cripto.tscn" id="9_lsmqk"]
+[ext_resource type="PackedScene" uid="uid://bm872g1rkfoas" path="res://escenas/niveles/notas/cripto bros/win/texto_win_cripto.tscn" id="10_3vqm4"]
+[ext_resource type="PackedScene" uid="uid://1tgxtnmd2d2j" path="res://escenas/niveles/notas/cripto bros/win/foto_win_cripto.tscn" id="10_uvqfb"]
+[ext_resource type="PackedScene" uid="uid://bwau2b4bt6ajq" path="res://escenas/niveles/notas/cripto bros/win/texto2_win_cripto.tscn" id="11_pgddi"]
+[ext_resource type="PackedScene" uid="uid://5g16gq1bol6h" path="res://escenas/niveles/notas/cripto bros/win/titular_win_cripto.tscn" id="12_al3lp"]
 [ext_resource type="PackedScene" uid="uid://x4ioy5al6wqi" path="res://UI/hud.tscn" id="20_v7ty8"]
 [ext_resource type="Script" path="res://escenas/niveles/selector.gd" id="21_e6ksl"]
 
@@ -37,6 +44,20 @@ time = 60
 position = Vector2(538, 429)
 script = ExtResource("7_jp62m")
 
+[node name="foto_win" parent="recortes" instance=ExtResource("8_risqx")]
+position = Vector2(193, 118)
+
+[node name="foto_win2" parent="recortes" instance=ExtResource("10_uvqfb")]
+position = Vector2(-191, 70)
+
+[node name="sub_win" parent="recortes" instance=ExtResource("9_lsmqk")]
+
+[node name="texto_win" parent="recortes" instance=ExtResource("10_3vqm4")]
+
+[node name="texto2_win" parent="recortes" instance=ExtResource("11_pgddi")]
+
+[node name="titular_win" parent="recortes" instance=ExtResource("12_al3lp")]
+
 [node name="HUD" parent="." instance=ExtResource("20_v7ty8")]
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -52,3 +73,7 @@ shape = SubResource("CircleShape2D_5hdxs")
 [node name="Sprite2D" type="Sprite2D" parent="Node2D"]
 visible = false
 texture = SubResource("PlaceholderTexture2D_l8vsv")
+
+[node name="criptoBros template" parent="." instance=ExtResource("9_i0cqq")]
+z_index = -2
+position = Vector2(1421, 464)

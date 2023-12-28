@@ -13,7 +13,7 @@ var body_ref
 var is_inside_dropable = false
 var mouse_over= false
 var drops = []
-var cant_correcta = 0
+
 var offset:Vector2 
 
 #agrega advertencias de construccion de objetos dragables
